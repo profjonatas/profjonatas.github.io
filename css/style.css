@@ -1,0 +1,157 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
+  background: #f7f7f7; /* Cor de fundo suave */
+  color: #333; /* Cor do texto */
+  line-height: 1.6; /* Maior espaçamento entre as linhas */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #0056a3; /* Cor de fundo do cabeçalho */
+  color: white; /* Cor do texto */
+  padding: 1em; /* Espaçamento interno */
+}
+
+/* Flexbox para o cabeçalho, alinha a imagem e os textos */
+.header-destaque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+}
+
+/* Estilo para a imagem do cabeçalho */
+.img-cabecalho {
+  height: 80px; /* Altura proporcional */
+  width: auto; /* Largura automática para manter a proporção */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-right: 1em; /* Espaçamento à direita */
+}
+
+/* Estilo para o bloco de título da escola */
+.titulo-escola {
+  flex: 1; /* Faz com que o título ocupe o restante do espaço */
+}
+
+/* Estilos para os títulos do cabeçalho */
+.titulo-escola h1,
+.titulo-escola h2 {
+  margin: 0; /* Remove margens extras */
+}
+
+/* Estilos do menu de navegação */
+nav {
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilo dos links do menu */
+nav a {
+  margin: 0 1em; /* Espaçamento entre os links */
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilo dos links quando o usuário passa o mouse por cima */
+nav a:hover {
+  text-decoration: underline; /* Sublinha o texto quando passar o mouse */
+}
+
+/* Estilos principais do conteúdo */
+main {
+  padding: 2em; /* Espaçamento interno */
+}
+
+/* Seções do conteúdo */
+section {
+  margin-bottom: 2em; /* Espaçamento entre as seções */
+}
+
+/* Estilo das imagens de perfil */
+.img-arredondada {
+  width: 100%; /* Largura máxima */
+  max-width: 200px; /* Limita a largura máxima */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para a galeria de imagens */
+.galeria {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 10px; /* Espaçamento entre as imagens */
+  justify-content: center; /* Alinha as imagens ao centro */
+}
+
+/* Estilo das imagens na galeria */
+.galeria img {
+  width: 100%; /* Largura total */
+  max-width: 200px; /* Limita a largura máxima */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Rodapé com direitos autorais */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #eee; /* Cor de fundo do rodapé */
+  font-size: 0.9em; /* Tamanho de fonte menor */
+}
+
+/* Responsividade: Ajustes para telas pequenas */
+
+/* Para dispositivos com largura máxima de 768px (tablets e telas menores) */
+@media (max-width: 768px) {
+  .header-destaque {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Alinha ao centro */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  /* Ajusta a imagem para o layout pequeno */
+  .img-cabecalho {
+    margin-right: 0; /* Remove margem à direita */
+    margin-bottom: 1em; /* Adiciona margem inferior */
+  }
+
+  /* Ajusta o layout dos links no menu */
+  nav a {
+    display: inline-block; /* Alinha os links em linha */
+    margin: 0.5em; /* Adiciona margem entre os links */
+  }
+
+  main {
+    padding: 1em; /* Reduz o espaçamento interno */
+  }
+}
+
+/* Para dispositivos com largura máxima de 480px (celulares e telas muito pequenas) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4em; /* Reduz o tamanho da fonte */
+  }
+
+  h2 {
+    font-size: 1.1em; /* Reduz o tamanho da fonte */
+  }
+
+  /* Ajusta a imagem do professor para ser menor */
+  .img-arredondada {
+    max-width: 150px; /* Limita o tamanho da imagem */
+  }
+
+  /* Ajusta a galeria de imagens para se ajustar a telas pequenas */
+  .galeria img {
+    max-width: 100%; /* Aumenta a largura das imagens */
+  }
+}
