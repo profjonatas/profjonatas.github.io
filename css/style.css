@@ -257,3 +257,52 @@ footer {
   padding: 1rem;
 }
 
+.carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.foto {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  max-width: 200px;
+  max-height: 300px;
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+
+.foto.destaque {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.foto.destaque:hover {
+  transform: scale(1.1);
+}
+
+.foto.esquerda,
+.foto.direita {
+  opacity: 0.5;
+  transform: scale(0.85);
+  z-index: 1;
+}
+
+.foto.invisivel {
+  display: none;
+}
+
+.seta-esquerda,
+.seta-direita {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
