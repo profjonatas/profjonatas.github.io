@@ -28,8 +28,37 @@
     <h2>Projeto Interdisciplinar</h2>
     <p>O Projeto Interdisciplinar dos alunos do 2º B do curso técnico em Desenvolvimento de Sistemas propõe que os alunos, organizados em grupos, criem uma empresa fictícia e desenvolvam uma aplicação ou site relacionado aos serviços ou produtos dessa empresa.</p>
     <p>A atividade integra os conteúdos das disciplinas técnicas do curso, promovendo o aprendizado prático, o trabalho em equipe, a criatividade e a autonomia dos estudantes. 
-      Ao longo do ano, os grupos passarão por etapas como planejamento, desenvolvimento, documentação e apresentação final do projeto. A avaliação é contínua e incluirá critérios técnicos, participação individual e uma autoavaliação reflexiva.</p>
-  <p>O projeto visa aproximar teoria e prática desde o início da formação profissional.</p>
+    Ao longo do ano, os grupos passarão por etapas como planejamento, desenvolvimento, documentação e apresentação final do projeto. A avaliação é contínua e incluirá critérios técnicos, participação individual e uma autoavaliação reflexiva.</p>
+    <p>O projeto visa aproximar teoria e prática desde o início da formação profissional.</p>
+
+     <!-- Galeria de fotos estilo roleta -->
+    <section class="carrossel-container">
+    <h2>Momentos do Projeto</h2>
+      <div class="carrossel">
+        <button class="seta esquerda">&#9664;</button>
+          <div class="fotos">
+            <img src="../img/foto1.jpg" alt="Foto 1" class="foto destaque" />
+            <img src="../img/foto2.jpg" alt="Foto 2" class="foto" />
+            <img src="../img/foto3.jpg" alt="Foto 3" class="foto" />
+            <img src="../img/foto4.jpg" alt="Foto 4" class="foto" />
+          </div>
+        <button class="seta direita">&#9654;</button>
+      </div>
+    </section>
+
+    <!-- Modal para tela cheia -->
+    <div id="modal" class="modal">
+      <span class="fechar">&times;</span>
+      <img class="modal-conteudo" id="img-modal">
+      <div class="modal-setas">
+        <span id="anterior">&#9664;</span>
+        <span id="proximo">&#9654;</span>
+      </div>
+    </div>
+
+    <!-- Importa o JS -->
+    <script src="../js/carrossel.js"></script>
+
   </main>
 
   <!-- Rodapé -->
