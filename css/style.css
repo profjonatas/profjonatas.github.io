@@ -156,60 +156,62 @@ footer {
   }
 }
 /* Carrossel de fotos */
-.carrossel-container {
-  text-align: center;
-  margin: 40px 0;
-}
-
+/* Container do carrossel */
 .carrossel {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   position: relative;
-  overflow-x: hidden;
+  gap: 1rem;
+  overflow: hidden;
+  padding: 2rem;
 }
 
-.fotos {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
-}
-
-.foto {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  opacity: 0.4;
-  transform: scale(0.9);
-  transition: all 0.3s ease;
+/* Botões de navegação */
+.seta {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
   cursor: pointer;
-}
-
-.foto.destaque {
-  width: 300px;
-  height: 200px;
-  opacity: 1;
-  transform: scale(1.05);
+  padding: 0.5rem 1rem;
   z-index: 2;
+  transition: background-color 0.3s;
+}
+.seta:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Estilo das imagens do carrossel */
+.foto {
+  width: 120px;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: all 0.5s ease;
+  transform: scale(0.8);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Imagem em destaque no centro */
+.foto.destaque {
+  width: 200px;
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* Efeito ao passar o mouse na imagem em destaque */
 .foto.destaque:hover {
   transform: scale(1.1);
 }
 
-.seta {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Modal de tela cheia */
+/* Modal para visualização em tela cheia */
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100vw;
@@ -220,39 +222,37 @@ footer {
   flex-direction: column;
 }
 
-.modal-conteudo {
+.modal img {
   max-width: 90%;
-  max-height: 80vh;
+  max-height: 80%;
+  border: 5px solid white;
+  border-radius: 8px;
+  transition: transform 0.3s;
 }
 
 .fechar {
   position: absolute;
-  top: 10px;
-  right: 25px;
+  top: 1rem;
+  right: 1rem;
   font-size: 2rem;
   color: white;
   cursor: pointer;
 }
 
-.modal-setas {
-  margin-top: 20px;
+.navegacao-modal {
   display: flex;
-  justify-content: center;
-  gap: 50px;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .foto.destaque {
-    width: 200px;
-    height: 130px;
-  }
-
-  .foto {
-    width: 100px;
-    height: 70px;
-  }
+.navegacao-modal button {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
 }
