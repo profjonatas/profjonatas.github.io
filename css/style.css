@@ -306,3 +306,52 @@ footer {
   position: relative;
   z-index: 3;
 }
+
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  margin: 40px auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrossel3d {
+  display: flex;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.foto {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  transform-origin: center center;
+  transition: transform 1s ease, opacity 1s ease;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0004;
+}
+
+.foto.ativa {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 2;
+}
+
+.seta-esquerda,
+.seta-direita {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 5;
+}

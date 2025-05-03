@@ -4,73 +4,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 // ====== CARROSSEL DE FOTOS (TURMA 2B) ======
-const carrossel = document.querySelector(".carrossel");
-const setaEsquerda = document.querySelector(".seta-esquerda");
-const setaDireita = document.querySelector(".seta-direita");
-let fotos = Array.from(carrossel.querySelectorAll(".foto"));
 
-let destaqueIndex = 0; // imagem inicial em destaque
+const fotos = document.querySelectorAll(".carrossel3d .foto");
+const total = fotos.length;
+let posicao = 0;
 
 function atualizarCarrossel() {
   fotos.forEach((foto, i) => {
-    foto.classList.remove("esquerda", "destaque", "direita", "invisivel");
+    const index = (i - posicao + total) % total;
 
-    // Cálculo circular dos índices
-    const total = fotos.length;
-    const idxEsq = (destaqueIndex - 1 + total) % total;
-    const idxCentro = destaqueIndex;
-    const idxDir = (destaqueIndex + 1) % total;
+    const offset = 300; // distância horizontal entre fotos
+    const scale = 0.8;
+    const rotateY = 30;
 
-    if (i === idxCentro) {
-      foto.classList.add("destaque");
-    } else if (i === idxEsq) {
-      foto.classList.add("esquerda");
-    } else if (i === idxDir) {
-      foto.classList.add("direita");
-    } else {
-      foto.classList.add("invisivel");
+    foto.style.opacity = "0";
+    foto.style.transform = "translate(-50%, -50%) scale(0.5)";
+    foto.classList.remove("ativa");
+
+    if (index === 0) {
+      foto.style.transform = "translate(-50%, -50%) scale(1.2)";
+      foto.style.opacity = "1";
+      foto.classList.add("ativa");
+    } else if (index === 1) {
+      foto.style.transform = `translate(calc(-50% + ${offset}px), -50%) scale(${scale}) rotateY(-${rotateY}deg)`;
+      foto.style.opacity = "0.5";
+    } else if (index === total - 1) {
+      foto.style.transform = `translate(calc(-50% - ${offset}px), -50%) scale(${scale}) rotateY(${rotateY}deg)`;
+      foto.style.opacity = "0.5";
     }
   });
 }
 
-// Setas para girar o carrossel
-setaDireita.addEventListener("click", () => {
-  destaqueIndex = (destaqueIndex + 1) % fotos.length;
+document.querySelector(".seta-direita").addEventListener("click", () => {
+  posicao = (posicao + 1) % total;
   atualizarCarrossel();
 });
 
-setaEsquerda.addEventListener("click", () => {
-  destaqueIndex = (destaqueIndex - 1 + fotos.length) % fotos.length;
+document.querySelector(".seta-esquerda").addEventListener("click", () => {
+  posicao = (posicao - 1 + total) % total;
   atualizarCarrossel();
 });
 
-// Modal de imagem em destaque
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImagem");
-const fecharModal = document.getElementById("fecharModal");
-
-carrossel.addEventListener("click", (e) => {
-  if (e.target.classList.contains("destaque")) {
-    modal.style.display = "flex";
-    modalImg.src = e.target.src;
-  }
-});
-
-fecharModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-document.getElementById("anteriorModal").addEventListener("click", () => {
-  destaqueIndex = (destaqueIndex - 1 + fotos.length) % fotos.length;
-  atualizarCarrossel();
-  modalImg.src = fotos[destaqueIndex].src;
-});
-
-document.getElementById("proximoModal").addEventListener("click", () => {
-  destaqueIndex = (destaqueIndex + 1) % fotos.length;
-  atualizarCarrossel();
-  modalImg.src = fotos[destaqueIndex].src;
-});
-
-// Inicializar
+// Inicializar carrossel
 atualizarCarrossel();
