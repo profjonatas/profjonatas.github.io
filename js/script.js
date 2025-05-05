@@ -19,28 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
       foto.style.transform = "translate(-50%, -50%) scale(0.6)";
 
       if (index === 0) {
-        // Central (ativa)
         foto.style.transform = "translate(-50%, -50%) scale(1.2)";
         foto.style.opacity = "1";
         foto.classList.add("ativa");
         foto.style.zIndex = "2";
       } else if (index === 1) {
-        // Primeira à direita
         foto.style.transform = "translate(calc(-50% + 250px), -50%) scale(0.8) rotateY(-20deg)";
         foto.style.opacity = "0.6";
         foto.style.zIndex = "1";
       } else if (index === 2) {
-        // Segunda à direita
         foto.style.transform = "translate(calc(-50% + 450px), -50%) scale(0.7) rotateY(-30deg)";
         foto.style.opacity = "0.4";
         foto.style.zIndex = "0";
       } else if (index === total - 1) {
-        // Primeira à esquerda
         foto.style.transform = "translate(calc(-50% - 250px), -50%) scale(0.8) rotateY(20deg)";
         foto.style.opacity = "0.6";
         foto.style.zIndex = "1";
       } else if (index === total - 2) {
-        // Segunda à esquerda
         foto.style.transform = "translate(calc(-50% - 450px), -50%) scale(0.7) rotateY(30deg)";
         foto.style.opacity = "0.4";
         foto.style.zIndex = "0";
@@ -59,6 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none";
   }
 
+  // Função para navegar no modal
+  function navegarModal(direcao) {
+    const novaPosicao = (posicao + direcao + total) % total;
+    posicao = novaPosicao;
+    modalImagem.src = fotos[posicao].src; // Atualiza a imagem no modal
+  }
+
   // Evento de clique nas fotos para abrir o modal
   fotos.forEach(foto => {
     foto.addEventListener("click", () => {
@@ -68,6 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Evento de fechar o modal
   document.querySelector(".fechar").addEventListener("click", fecharModal);
+
+  // Eventos de navegação no modal
+  document.querySelector(".seta-direita").addEventListener("click", () => {
+    navegarModal(1); // Navega para a próxima foto
+  });
+
+  document.querySelector(".seta-esquerda").addEventListener("click", () => {
+    navegarModal(-1); // Navega para a foto anterior
+  });
 
   // Navegação do carrossel
   document.querySelector(".seta-direita").addEventListener("click", () => {
