@@ -92,5 +92,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
-  atualizarCarrossel(); // ← IMPORTANTE: precisa ser chamado no carregamento
+  atualizarCarrossel();
 });
