@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fotos = document.querySelectorAll(".carrossel3d .foto");
   const total = fotos.length;
   let posicao = 0;
-
-  // Modal e imagem do modal
-  const modal = document.getElementById("modal");
-  const modalImagem = document.getElementById("img-modal");
+  let fotoAtual = 0; // Para controlar a foto que está sendo exibida no modal
 
   function atualizarCarrossel() {
     fotos.forEach((foto, i) => {
@@ -19,23 +16,28 @@ document.addEventListener("DOMContentLoaded", () => {
       foto.style.transform = "translate(-50%, -50%) scale(0.6)";
 
       if (index === 0) {
+        // Central (ativa)
         foto.style.transform = "translate(-50%, -50%) scale(1.2)";
         foto.style.opacity = "1";
         foto.classList.add("ativa");
         foto.style.zIndex = "2";
       } else if (index === 1) {
+        // Primeira à direita
         foto.style.transform = "translate(calc(-50% + 250px), -50%) scale(0.8) rotateY(-20deg)";
         foto.style.opacity = "0.6";
         foto.style.zIndex = "1";
       } else if (index === 2) {
+        // Segunda à direita
         foto.style.transform = "translate(calc(-50% + 450px), -50%) scale(0.7) rotateY(-30deg)";
         foto.style.opacity = "0.4";
         foto.style.zIndex = "0";
       } else if (index === total - 1) {
+        // Primeira à esquerda
         foto.style.transform = "translate(calc(-50% - 250px), -50%) scale(0.8) rotateY(20deg)";
         foto.style.opacity = "0.6";
         foto.style.zIndex = "1";
       } else if (index === total - 2) {
+        // Segunda à esquerda
         foto.style.transform = "translate(calc(-50% - 450px), -50%) scale(0.7) rotateY(30deg)";
         foto.style.opacity = "0.4";
         foto.style.zIndex = "0";
@@ -43,44 +45,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Função para abrir o modal com a imagem clicada
-  function abrirModal(imagem) {
-    modal.style.display = "block";
-    modalImagem.src = imagem.src; // Atribui a imagem clicada ao modal
-  }
-
-  // Função para fechar o modal
-  function fecharModal() {
-    modal.style.display = "none";
-  }
-
-  // Função para navegar no modal
-  function navegarModal(direcao) {
-    const novaPosicao = (posicao + direcao + total) % total;
-    posicao = novaPosicao;
-    modalImagem.src = fotos[posicao].src; // Atualiza a imagem no modal
-  }
-
-  // Evento de clique nas fotos para abrir o modal
+  // Mostrar o modal quando uma foto for clicada
   fotos.forEach(foto => {
-    foto.addEventListener("click", () => {
-      abrirModal(foto);
+    foto.addEventListener("click", (e) => {
+      fotoAtual = parseInt(e.target.getAttribute("data-index"));
+      const modal = document.getElementById("modal");
+      const imgModal = document.getElementById("img-modal");
+      imgModal.src = e.target.src;
+      modal.style.display = "block";
     });
   });
 
-  // Evento de fechar o modal
-  document.querySelector(".fechar").addEventListener("click", fecharModal);
-
-  // Eventos de navegação no modal
-  document.querySelector(".seta-direita").addEventListener("click", () => {
-    navegarModal(1); // Navega para a próxima foto
+  // Fechar o modal
+  document.querySelector(".fechar").addEventListener("click", () => {
+    document.getElementById("modal").style.display = "none";
   });
 
-  document.querySelector(".seta-esquerda").addEventListener("click", () => {
-    navegarModal(-1); // Navega para a foto anterior
+  // Navegar entre as fotos no modal
+  document.getElementById("proximo").addEventListener("click", () => {
+    fotoAtual = (fotoAtual + 1) % total;
+    document.getElementById("img-modal").src = fotos[fotoAtual].src;
   });
 
-  // Navegação do carrossel
+  document.getElementById("anterior").addEventListener("click", () => {
+    fotoAtual = (fotoAtual - 1 + total) % total;
+    document.getElementById("img-modal").src = fotos[fotoAtual].src;
+  });
+
+  // Navegar nas setas do carrossel
   document.querySelector(".seta-direita").addEventListener("click", () => {
     posicao = (posicao + 1) % total;
     atualizarCarrossel();
