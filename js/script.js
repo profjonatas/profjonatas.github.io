@@ -83,17 +83,33 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarCarrossel();
   });
 
-    // ⌨️ Adicionando navegação com teclas ← e →
+  // ⌨️ Adicionando navegação com teclas ← e →
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
-      showImage(currentIndex - 1);
+      // Navegar para a foto anterior
+      if (document.getElementById("modal").style.display === "block") {
+        fotoAtual = (fotoAtual - 1 + total) % total;
+        document.getElementById("img-modal").src = fotos[fotoAtual].src;
+      } else {
+        // Navegar no carrossel
+        posicao = (posicao - 1 + total) % total;
+        atualizarCarrossel();
+      }
     } else if (event.key === "ArrowRight") {
-      showImage(currentIndex + 1);
+      // Navegar para a próxima foto
+      if (document.getElementById("modal").style.display === "block") {
+        fotoAtual = (fotoAtual + 1) % total;
+        document.getElementById("img-modal").src = fotos[fotoAtual].src;
+      } else {
+        // Navegar no carrossel
+        posicao = (posicao + 1) % total;
+        atualizarCarrossel();
+      }
     } else if (event.key === "Escape") {
-      modal.style.display = "none"; // fecha modal com ESC
+      // Fechar o modal com ESC
+      document.getElementById("modal").style.display = "none";
     }
   });
-  
 
   atualizarCarrossel();
 });
