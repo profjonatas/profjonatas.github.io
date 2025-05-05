@@ -83,5 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarCarrossel();
   });
 
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      showImage(currentIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      showImage(currentIndex + 1);
+    }
+  });
+  
+
   atualizarCarrossel(); // ← IMPORTANTE: precisa ser chamado no carregamento
 });
