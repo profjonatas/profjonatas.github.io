@@ -1,65 +1,214 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #0056a3;
+  color: white;
+  padding: 1em;
+}
+
+/* Flexbox para o cabeçalho */
+.header-destaque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Imagem do cabeçalho */
+.img-cabecalho {
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+  margin-right: 1em;
+}
+
+/* Título da escola */
+.titulo-escola {
+  flex: 1;
+}
+
+.titulo-escola h1,
+.titulo-escola h2 {
+  margin: 0;
+}
+
+/* Menu de navegação */
+nav {
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+nav a {
+  margin: 0 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+/* Imagens de perfil */
+.img-arredondada {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Galeria */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #eee;
+  font-size: 0.9em;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .header-destaque {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img-cabecalho {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5em;
+  }
+
+  main {
+    padding: 1em;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .img-arredondada {
+    max-width: 150px;
+  }
+
+  .galeria img {
+    max-width: 100%;
+  }
+}
+
+/* ------------------ Carrossel de Fotos ------------------ */
+
 .carrossel-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 1000px;
+  margin: 40px auto;
   overflow: hidden;
-  padding: 20px 0;
+  text-align: center;
 }
 
 .carrossel3d {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
+  height: 350px;
+  transform-style: preserve-3d;
   perspective: 1000px;
 }
 
 .foto {
   position: absolute;
-  max-width: 300px;
-  max-height: 250px;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  max-height: 260px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+  opacity: 0;
+  z-index: 0;
 }
 
-/* Botões de navegação */
+.foto.ativa {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+  z-index: 2;
+}
+
 .seta-esquerda,
 .seta-direita {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 30px;
-  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 35px;
+  background: rgba(255, 255, 255, 0.8);
   border: none;
   cursor: pointer;
-  padding: 10px;
-  z-index: 10;
+  padding: 10px 15px;
   border-radius: 50%;
+  z-index: 3;
 }
 
-.seta-esquerda {
-  left: 10px;
-}
+.seta-esquerda { left: 10px; }
+.seta-direita { right: 10px; }
 
-.seta-direita {
-  right: 10px;
-}
-
-/* Modal em tela cheia */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 20;
-  left: 0;
-  top: 0;
+  z-index: 100;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
 }
 
 .modal-conteudo {
@@ -79,7 +228,6 @@
   cursor: pointer;
 }
 
-/* Setas dentro do modal */
 .modal-setas {
   position: absolute;
   top: 50%;
@@ -89,9 +237,4 @@
   color: white;
   font-size: 40px;
   padding: 0 20px;
-}
-
-.modal-setas span {
-  cursor: pointer;
-  user-select: none;
 }
