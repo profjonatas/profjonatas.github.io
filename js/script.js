@@ -83,11 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarCarrossel();
   });
 
+    // ⌨️ Adicionando navegação com teclas ← e →
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
       showImage(currentIndex - 1);
     } else if (event.key === "ArrowRight") {
       showImage(currentIndex + 1);
+    } else if (event.key === "Escape") {
+      modal.style.display = "none"; // fecha modal com ESC
     }
   });
   
