@@ -235,8 +235,8 @@ footer {
 .modal-conteudo {
   display: block;
   margin: 5% auto;
-  max-width: 100%; /* Imagem maior na tela cheia */
-  max-height: 95%;
+  max-width: 95%; /* Imagem maior na tela cheia */
+  max-height: 90%;
   border-radius: 8px;
 }
 
