@@ -7,207 +7,219 @@
 
 /* Estilos gerais do corpo da página */
 body {
-  font-family: Arial, sans-serif; /* Define a fonte padrão */
-  background: #f7f7f7; /* Cor de fundo suave */
-  color: #333; /* Cor do texto */
-  line-height: 1.6; /* Maior espaçamento entre as linhas */
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Estilos para o cabeçalho */
 header {
-  background-color: #0056a3; /* Cor de fundo do cabeçalho */
-  color: white; /* Cor do texto */
-  padding: 1em; /* Espaçamento interno */
+  background-color: #0056a3;
+  color: white;
+  padding: 1em;
 }
 
-/* Flexbox para o cabeçalho, alinha a imagem e os textos */
+/* Flexbox para o cabeçalho */
 .header-destaque {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+  flex-wrap: wrap;
 }
 
-/* Estilo para a imagem do cabeçalho */
+/* Imagem do cabeçalho */
 .img-cabecalho {
-  height: 80px; /* Altura proporcional */
-  width: auto; /* Largura automática para manter a proporção */
-  border-radius: 10px; /* Bordas arredondadas */
-  margin-right: 1em; /* Espaçamento à direita */
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+  margin-right: 1em;
 }
 
-/* Estilo para o bloco de título da escola */
+/* Título da escola */
 .titulo-escola {
-  flex: 1; /* Faz com que o título ocupe o restante do espaço */
+  flex: 1;
 }
 
-/* Estilos para os títulos do cabeçalho */
 .titulo-escola h1,
 .titulo-escola h2 {
-  margin: 0; /* Remove margens extras */
+  margin: 0;
 }
 
-/* Estilos do menu de navegação */
+/* Menu de navegação */
 nav {
   margin-top: 1em;
   text-align: center;
   width: 100%;
 }
 
-/* Estilo dos links do menu */
 nav a {
-  margin: 0 1em; /* Espaçamento entre os links */
-  color: white; /* Cor do texto */
-  text-decoration: none; /* Remove o sublinhado */
-  font-weight: bold; /* Deixa o texto em negrito */
+  margin: 0 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Estilo dos links quando o usuário passa o mouse por cima */
 nav a:hover {
-  text-decoration: underline; /* Sublinha o texto quando passar o mouse */
+  text-decoration: underline;
 }
 
-/* Estilos principais do conteúdo */
+/* Conteúdo principal */
 main {
-  padding: 2em; /* Espaçamento interno */
+  padding: 2em;
 }
 
-/* Seções do conteúdo */
 section {
-  margin-bottom: 2em; /* Espaçamento entre as seções */
+  margin-bottom: 2em;
 }
 
-/* Estilo das imagens de perfil */
+/* Imagens de perfil */
 .img-arredondada {
-  width: 100%; /* Largura máxima */
-  max-width: 200px; /* Limita a largura máxima */
-  border-radius: 15px; /* Bordas arredondadas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 100%;
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para a galeria de imagens */
+/* Galeria */
 .galeria {
   display: flex;
-  flex-wrap: wrap; /* Permite quebra de linha */
-  gap: 10px; /* Espaçamento entre as imagens */
-  justify-content: center; /* Alinha as imagens ao centro */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
-/* Estilo das imagens na galeria */
 .galeria img {
-  width: 100%; /* Largura total */
-  max-width: 200px; /* Limita a largura máxima */
-  border-radius: 10px; /* Bordas arredondadas */
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
 }
 
-/* Rodapé com direitos autorais */
+/* Rodapé */
 footer {
   text-align: center;
   padding: 1em;
-  background: #eee; /* Cor de fundo do rodapé */
-  font-size: 0.9em; /* Tamanho de fonte menor */
+  background: #eee;
+  font-size: 0.9em;
 }
 
-/* Responsividade: Ajustes para telas pequenas */
-
-/* Para dispositivos com largura máxima de 768px (tablets e telas menores) */
+/* Responsividade para tablets */
 @media (max-width: 768px) {
   .header-destaque {
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Alinha ao centro */
-    text-align: center; /* Centraliza o texto */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  /* Ajusta a imagem para o layout pequeno */
   .img-cabecalho {
-    margin-right: 0; /* Remove margem à direita */
-    margin-bottom: 1em; /* Adiciona margem inferior */
+    margin-right: 0;
+    margin-bottom: 1em;
   }
 
-  /* Ajusta o layout dos links no menu */
   nav a {
-    display: inline-block; /* Alinha os links em linha */
-    margin: 0.5em; /* Adiciona margem entre os links */
+    display: inline-block;
+    margin: 0.5em;
   }
 
   main {
-    padding: 1em; /* Reduz o espaçamento interno */
+    padding: 1em;
   }
 }
 
-/* Para dispositivos com largura máxima de 480px (celulares e telas muito pequenas) */
+/* Responsividade para celulares */
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.4em; /* Reduz o tamanho da fonte */
+    font-size: 1.4em;
   }
 
   h2 {
-    font-size: 1.1em; /* Reduz o tamanho da fonte */
+    font-size: 1.1em;
   }
 
-  /* Ajusta a imagem do professor para ser menor */
   .img-arredondada {
-    max-width: 150px; /* Limita o tamanho da imagem */
+    max-width: 150px;
   }
 
-  /* Ajusta a galeria de imagens para se ajustar a telas pequenas */
   .galeria img {
-    max-width: 100%; /* Aumenta a largura das imagens */
+    max-width: 100%;
   }
 }
-/* Carrossel de fotos */
+
+/* ------------------ Carrossel de Fotos ------------------ */
+
 /* Container do carrossel */
-.carrossel {
+.carrossel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  gap: 1rem;
+  perspective: 1000px;
+  margin: 40px auto;
+  width: 100%;
   overflow: hidden;
-  padding: 2rem;
 }
 
-/* Botões de navegação */
-.seta {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  z-index: 2;
-  transition: background-color 0.3s;
-}
-.seta:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+/* Conteúdo interno do carrossel com efeito 3D */
+.carrossel3d {
+  display: flex;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
 }
 
-/* Estilo das imagens do carrossel */
+/* Imagens do carrossel */
 .foto {
-  width: 120px;
-  opacity: 0.3;
-  filter: blur(2px);
-  transition: all 0.5s ease;
-  transform: scale(0.8);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  transition: transform 1s ease, opacity 1s ease;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0004;
+  opacity: 0.5;
   cursor: pointer;
-  flex-shrink: 0;
-}
-
-/* Imagem em destaque no centro */
-.foto.destaque {
-  width: 200px;
-  opacity: 1;
-  filter: none;
-  transform: scale(1);
   z-index: 1;
 }
 
-/* Efeito ao passar o mouse na imagem em destaque */
-.foto.destaque:hover {
-  transform: scale(1.1);
+.foto.ativa {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 2;
 }
 
-/* Modal para visualização em tela cheia */
+.foto:hover.ativa {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* Classes auxiliares para posição lateral */
+.foto.esquerda,
+.foto.direita {
+  opacity: 0.5;
+  transform: scale(0.85);
+  z-index: 1;
+}
+
+.foto.invisivel {
+  display: none;
+}
+
+/* Botões de navegação */
+.seta-esquerda,
+.seta-direita {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 5;
+  color: white;
+}
+
+/* Modal em tela cheia */
 .modal {
   display: none;
   position: fixed;
@@ -251,107 +263,4 @@ footer {
 .navegacao-modal button {
   background: none;
   border: none;
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
-  padding: 1rem;
-}
-
-.carrossel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  gap: 20px;
-  overflow: hidden;
-  padding: 20px 0;
-}
-
-.foto {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
-  max-width: 200px;
-  max-height: 300px;
-  opacity: 0.3;
-  transform: scale(0.8);
-}
-
-.foto.destaque {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 2;
-}
-
-.foto.destaque:hover {
-  transform: scale(1.1);
-}
-
-.foto.esquerda,
-.foto.direita {
-  opacity: 0.5;
-  transform: scale(0.85);
-  z-index: 1;
-}
-
-.foto.invisivel {
-  display: none;
-}
-
-.seta-esquerda,
-.seta-direita {
-  background: none;
-  border: none;
-  font-size: 2em;
-  cursor: pointer;
-  position: relative;
-  z-index: 3;
-}
-
-.carrossel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-  margin: 40px auto;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carrossel3d {
-  display: flex;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
-  width: 100%;
-  max-width: 600px;
-  position: relative;
-}
-
-.foto {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  transform-origin: center center;
-  transition: transform 1s ease, opacity 1s ease;
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0004;
-}
-
-.foto.ativa {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.2);
-  z-index: 2;
-}
-
-.seta-esquerda,
-.seta-direita {
-  background: none;
-  border: none;
-  font-size: 3rem;
-  cursor: pointer;
-  z-index: 5;
-}
+  font-size:
