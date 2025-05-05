@@ -1,11 +1,13 @@
-/* Reset de estilos para garantir consistência entre navegadores */
+/* ------------------ RESET DE ESTILOS ------------------ */
+/* Remove margens e preenchimentos padrão dos navegadores e usa box-sizing: border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos gerais do corpo da página */
+/* ------------------ ESTILO GERAL ------------------ */
+/* Define fonte, cor de fundo e cor do texto para o corpo da página */
 body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
@@ -13,14 +15,15 @@ body {
   line-height: 1.6;
 }
 
-/* Estilos para o cabeçalho */
+/* ------------------ CABEÇALHO ------------------ */
+/* Estiliza o cabeçalho com cor de fundo e preenchimento */
 header {
   background-color: #0056a3;
   color: white;
   padding: 1em;
 }
 
-/* Flexbox para o cabeçalho */
+/* Layout flexível no cabeçalho, alinhando os itens */
 .header-destaque {
   display: flex;
   align-items: center;
@@ -28,7 +31,7 @@ header {
   flex-wrap: wrap;
 }
 
-/* Imagem do cabeçalho */
+/* Define o tamanho e aparência da imagem do cabeçalho */
 .img-cabecalho {
   height: 80px;
   width: auto;
@@ -36,23 +39,26 @@ header {
   margin-right: 1em;
 }
 
-/* Título da escola */
+/* Responsável pela área do título da escola */
 .titulo-escola {
   flex: 1;
 }
 
+/* Remove margens dos títulos no cabeçalho */
 .titulo-escola h1,
 .titulo-escola h2 {
   margin: 0;
 }
 
-/* Menu de navegação */
+/* ------------------ MENU DE NAVEGAÇÃO ------------------ */
+/* Centraliza e espaça os links de navegação */
 nav {
   margin-top: 1em;
   text-align: center;
   width: 100%;
 }
 
+/* Estilo dos links de navegação */
 nav a {
   margin: 0 1em;
   color: white;
@@ -60,20 +66,24 @@ nav a {
   font-weight: bold;
 }
 
+/* Estilo ao passar o mouse nos links */
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Conteúdo principal */
+/* ------------------ CONTEÚDO PRINCIPAL ------------------ */
+/* Espaçamento interno do conteúdo principal */
 main {
   padding: 2em;
 }
 
+/* Espaçamento entre seções */
 section {
   margin-bottom: 2em;
 }
 
-/* Imagens de perfil */
+/* ------------------ IMAGENS DE PERFIL ------------------ */
+/* Imagens com bordas arredondadas e sombra */
 .img-arredondada {
   width: 100%;
   max-width: 200px;
@@ -81,7 +91,8 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Galeria */
+/* ------------------ GALERIA ------------------ */
+/* Layout flexível com espaçamento entre imagens */
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -89,13 +100,15 @@ section {
   justify-content: center;
 }
 
+/* Estilo das imagens na galeria */
 .galeria img {
   width: 100%;
   max-width: 200px;
   border-radius: 10px;
 }
 
-/* Rodapé */
+/* ------------------ RODAPÉ ------------------ */
+/* Centraliza o texto do rodapé com fundo claro */
 footer {
   text-align: center;
   padding: 1em;
@@ -103,7 +116,8 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsividade para tablets */
+/* ------------------ RESPONSIVIDADE ------------------ */
+/* Tablets (até 768px) */
 @media (max-width: 768px) {
   .header-destaque {
     flex-direction: column;
@@ -126,7 +140,7 @@ footer {
   }
 }
 
-/* Responsividade para celulares */
+/* Celulares (até 480px) */
 @media (max-width: 480px) {
   h1 {
     font-size: 1.4em;
@@ -145,8 +159,8 @@ footer {
   }
 }
 
-/* ------------------ Carrossel de Fotos ------------------ */
-
+/* ------------------ CARROSSEL DE FOTOS ------------------ */
+/* Container do carrossel com largura máxima e margem automática */
 .carrossel-container {
   position: relative;
   width: 100%;
@@ -156,6 +170,7 @@ footer {
   text-align: center;
 }
 
+/* Área onde as imagens do carrossel giram em 3D */
 .carrossel3d {
   position: relative;
   height: 350px;
@@ -163,13 +178,14 @@ footer {
   perspective: 1000px;
 }
 
+/* Estilo padrão de cada foto no carrossel */
 .foto {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.6s ease, opacity 0.6s ease;
-  max-height: 260px;
+  max-height: 260px; /* Imagens menores no carrossel */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   cursor: pointer;
@@ -177,12 +193,14 @@ footer {
   z-index: 0;
 }
 
+/* Estilo da foto ativa (central) no carrossel */
 .foto.ativa {
   transform: translate(-50%, -50%) scale(1.2);
   opacity: 1;
   z-index: 2;
 }
 
+/* Botões de navegação do carrossel (setas) */
 .seta-esquerda,
 .seta-direita {
   position: absolute;
@@ -197,10 +215,12 @@ footer {
   z-index: 3;
 }
 
+/* Posicionamento das setas */
 .seta-esquerda { left: 10px; }
 .seta-direita { right: 10px; }
 
-/* Modal */
+/* ------------------ MODAL DE IMAGEM (TELA CHEIA) ------------------ */
+/* Modal escuro sobre a tela toda */
 .modal {
   display: none;
   position: fixed;
@@ -211,14 +231,16 @@ footer {
   background: rgba(0,0,0,0.9);
 }
 
+/* Imagem exibida em tela cheia */
 .modal-conteudo {
   display: block;
   margin: 5% auto;
-  max-width: 90%;
+  max-width: 90%; /* Imagem maior na tela cheia */
   max-height: 80%;
   border-radius: 8px;
 }
 
+/* Botão de fechar o modal */
 .fechar {
   position: absolute;
   top: 20px;
@@ -228,6 +250,7 @@ footer {
   cursor: pointer;
 }
 
+/* Container das setas dentro do modal */
 .modal-setas {
   position: absolute;
   top: 50%;
@@ -239,6 +262,7 @@ footer {
   padding: 0 20px;
 }
 
+/* Estilo das setas no modal */
 .modal-setas span {
   cursor: pointer;
   user-select: none;
@@ -246,6 +270,7 @@ footer {
   transition: background 0.3s;
 }
 
+/* Efeito hover nas setas do modal */
 .modal-setas span:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
