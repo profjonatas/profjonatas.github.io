@@ -286,3 +286,8 @@ footer {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
+
+/* Oculta o cabeçalho ao exibir as fotos em tela cheia */
+body.modal-ativa header {
+  display: none;
+}
