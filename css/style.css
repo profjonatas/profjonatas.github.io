@@ -20,7 +20,7 @@ body {
 /* Estiliza o cabeçalho com cor de fundo e preenchimento */
 header {
   background-color: #0056a3;
-  color: white;
+  color: yellow;
   padding: 1em;
   position: fixed; /* Fixar no topo */
   top: 0;
@@ -72,7 +72,7 @@ nav {
 /* Estilo dos links de navegação */
 nav a {
   margin: 0 1em;
-  color: white;
+  color: yellow (255, 255, 255);
   text-decoration: none;
   font-weight: bold;
 }
