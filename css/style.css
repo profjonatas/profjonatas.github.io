@@ -44,7 +44,7 @@ header {
 
 /* Define o tamanho e aparência da imagem do cabeçalho */
 .img-cabecalho {
-  height: 150px;
+  height: 100px;
   width: auto;
   border-radius: 10px;
   margin-right: 1em;
