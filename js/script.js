@@ -41,18 +41,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Mostrar o modal quando uma foto for clicada
-  fotos.forEach(foto => {
-    foto.addEventListener("click", (e) => {
-      fotoAtual = parseInt(e.target.getAttribute("data-index"));
-      const modal = document.getElementById("modal");
-      const imgModal = document.getElementById("img-modal");
-      imgModal.src = e.target.src;
-      modal.style.display = "block";
-
-      // Esconde o cabeçalho
-      // document.body.classList.add("modal-ativa");
-    });
+  // Mostrar o modal quando uma foto for clicada
+fotos.forEach(foto => {
+  foto.addEventListener("click", (e) => {
+    fotoAtual = parseInt(e.target.getAttribute("data-index"));
+    const modal = document.getElementById("modal");
+    const imgModal = document.getElementById("img-modal");
+    
+    // Resetar estilos da imagem para mobile
+    imgModal.style.maxWidth = '';
+    imgModal.style.maxHeight = '';
+    
+    imgModal.src = e.target.src;
+    modal.style.display = "block";
+    
+    // Forçar redimensionamento após carregamento
+    imgModal.onload = function() {
+      ajustarImagemModal(imgModal);
+    };
+    
+    // Verificar se já está carregada (cache)
+    if (imgModal.complete) {
+      ajustarImagemModal(imgModal);
+    }
   });
+});
+
+// Função para ajustar a imagem no modal
+function ajustarImagemModal(img) {
+  const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
+  const imgRatio = img.naturalWidth / img.naturalHeight;
+  
+  // Ajustar baseado na orientação da imagem
+  if (imgRatio > 1) {
+    // Imagem horizontal
+    img.style.maxWidth = '90vw';
+    img.style.maxHeight = '';
+  } else {
+    // Imagem vertical
+    img.style.maxHeight = '80vh';
+    img.style.maxWidth = '';
+  }
+}
+
+// Adicionar evento de redimensionamento da janela
+window.addEventListener('resize', function() {
+  const imgModal = document.getElementById("img-modal");
+  if (imgModal && document.getElementById("modal").style.display === "block") {
+    ajustarImagemModal(imgModal);
+  }
+});
 
   // Fechar o modal
   document.querySelector(".fechar").addEventListener("click", () => {
