@@ -291,3 +291,37 @@ footer {
 body.modal-ativa header {
   display: none;
 }*/
+
+
+.destaques-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.destaque-card {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.destaque-icon {
+  background: #0056a3;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.destaque-texto {
+  font-weight: 500;
+  color: #333;
+}
