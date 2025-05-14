@@ -13,7 +13,7 @@ body {
   background: #f7f7f7;
   color: #333;
   line-height: 1.6;
-  padding-top: 140px; /* Ajuste este valor conforme a altura do cabeçalho */
+ /* padding-top: 140px;  Ajuste este valor conforme a altura do cabeçalho */
 }
 
 /* ------------------ CABEÇALHO ------------------ */
@@ -22,11 +22,11 @@ header {
   background-color: #0056a3;
   color: yellow;
   padding: 1em;
- /* position: fixed;  Fixar no topo */
+ /* position: fixed;  Fixar no topo 
   top: 0;
   left: 0;
-  width: 100%;
- /* z-index: 1000;  Garante que o cabeçalho fique acima de outros conteúdos */
+  width: 100%; */
+  z-index: 1000;  /* Garante que o cabeçalho fique acima de outros conteúdos */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o cabeçalho */
   display: flex;
   align-items: center;
@@ -287,7 +287,7 @@ footer {
   border-radius: 50%;
 }
 
-/* Oculta o cabeçalho ao exibir as fotos em tela cheia */
+/* Oculta o cabeçalho ao exibir as fotos em tela cheia 
 body.modal-ativa header {
   display: none;
-}
+}*/

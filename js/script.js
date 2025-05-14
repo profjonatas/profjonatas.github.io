@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "block";
 
       // Esconde o cabeçalho
-      document.body.classList.add("modal-ativa");
+      // document.body.classList.add("modal-ativa");
     });
   });
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modal").style.display = "none";
 
     // Mostra o cabeçalho novamente
-    document.body.classList.remove("modal-ativa");
+   // document.body.classList.remove("modal-ativa");
   });
 
   // Navegar entre as fotos no modal
