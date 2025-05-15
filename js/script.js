@@ -41,75 +41,76 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Mostrar o modal quando uma foto for clicada
-  // Mostrar o modal quando uma foto for clicada
-fotos.forEach(foto => {
-  foto.addEventListener("click", (e) => {
-    fotoAtual = parseInt(e.target.getAttribute("data-index"));
-    const modal = document.getElementById("modal");
-    const imgModal = document.getElementById("img-modal");
-    
-    // Resetar estilos da imagem para mobile
-    imgModal.style.maxWidth = '';
-    imgModal.style.maxHeight = '';
-    
-    imgModal.src = e.target.src;
-    modal.style.display = "block";
-    
-    // Forçar redimensionamento após carregamento
-    imgModal.onload = function() {
-      ajustarImagemModal(imgModal);
-    };
-    
-    // Verificar se já está carregada (cache)
-    if (imgModal.complete) {
-      ajustarImagemModal(imgModal);
-    }
+  fotos.forEach(foto => {
+    foto.addEventListener("click", (e) => {
+      fotoAtual = parseInt(e.target.getAttribute("data-index"));
+      const modal = document.getElementById("modal");
+      const imgModal = document.getElementById("img-modal");
+      
+      // Bloquear scroll do body quando o modal estiver aberto
+      document.body.style.overflow = 'hidden';
+      
+      imgModal.src = e.target.src;
+      modal.style.display = "block";
+      
+      // Ajustar imagem após carregamento
+      imgModal.onload = function() {
+        ajustarImagemModal(imgModal);
+      };
+      
+      // Se a imagem já estiver em cache
+      if (imgModal.complete) {
+        ajustarImagemModal(imgModal);
+      }
+    });
   });
-});
 
-// Função para ajustar a imagem no modal
-function ajustarImagemModal(img) {
-  const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
-  const imgRatio = img.naturalWidth / img.naturalHeight;
-  
-  // Ajustar baseado na orientação da imagem
-  if (imgRatio > 1) {
-    // Imagem horizontal
-    img.style.maxWidth = '90vw';
-    img.style.maxHeight = '';
-  } else {
-    // Imagem vertical
-    img.style.maxHeight = '80vh';
-    img.style.maxWidth = '';
+  // Função para ajustar a imagem no modal
+  function ajustarImagemModal(img) {
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    const imgRatio = img.naturalWidth / img.naturalHeight;
+    const windowRatio = windowWidth / windowHeight;
+    
+    // Ajustar baseado na orientação da imagem
+    if (imgRatio > windowRatio) {
+      // Imagem mais larga que a janela
+      img.style.maxWidth = '95vw';
+      img.style.maxHeight = 'auto';
+    } else {
+      // Imagem mais alta que a janela
+      img.style.maxHeight = '90vh';
+      img.style.maxWidth = 'auto';
+    }
   }
-}
-
-// Adicionar evento de redimensionamento da janela
-window.addEventListener('resize', function() {
-  const imgModal = document.getElementById("img-modal");
-  if (imgModal && document.getElementById("modal").style.display === "block") {
-    ajustarImagemModal(imgModal);
-  }
-});
 
   // Fechar o modal
   document.querySelector(".fechar").addEventListener("click", () => {
     document.getElementById("modal").style.display = "none";
+    document.body.style.overflow = ''; // Restaurar scroll do body
+  });
 
-    // Mostra o cabeçalho novamente
-   // document.body.classList.remove("modal-ativa");
+  // Fechar modal ao clicar fora da imagem
+  document.getElementById("modal").addEventListener("click", function(e) {
+    if (e.target === this) {
+      this.style.display = "none";
+      document.body.style.overflow = '';
+    }
   });
 
   // Navegar entre as fotos no modal
   document.getElementById("proximo").addEventListener("click", () => {
     fotoAtual = (fotoAtual + 1) % total;
-    document.getElementById("img-modal").src = fotos[fotoAtual].src;
+    const imgModal = document.getElementById("img-modal");
+    imgModal.src = fotos[fotoAtual].src;
+    ajustarImagemModal(imgModal);
   });
 
   document.getElementById("anterior").addEventListener("click", () => {
     fotoAtual = (fotoAtual - 1 + total) % total;
-    document.getElementById("img-modal").src = fotos[fotoAtual].src;
+    const imgModal = document.getElementById("img-modal");
+    imgModal.src = fotos[fotoAtual].src;
+    ajustarImagemModal(imgModal);
   });
 
   // Navegar nas setas do carrossel
@@ -125,27 +126,42 @@ window.addEventListener('resize', function() {
 
   // Navegação com teclado
   document.addEventListener("keydown", (event) => {
+    const modal = document.getElementById("modal");
+    const imgModal = document.getElementById("img-modal");
+    
     if (event.key === "ArrowLeft") {
-      if (document.getElementById("modal").style.display === "block") {
+      if (modal.style.display === "block") {
         fotoAtual = (fotoAtual - 1 + total) % total;
-        document.getElementById("img-modal").src = fotos[fotoAtual].src;
+        imgModal.src = fotos[fotoAtual].src;
+        ajustarImagemModal(imgModal);
       } else {
         posicao = (posicao - 1 + total) % total;
         atualizarCarrossel();
       }
     } else if (event.key === "ArrowRight") {
-      if (document.getElementById("modal").style.display === "block") {
+      if (modal.style.display === "block") {
         fotoAtual = (fotoAtual + 1) % total;
-        document.getElementById("img-modal").src = fotos[fotoAtual].src;
+        imgModal.src = fotos[fotoAtual].src;
+        ajustarImagemModal(imgModal);
       } else {
         posicao = (posicao + 1) % total;
         atualizarCarrossel();
       }
     } else if (event.key === "Escape") {
-      document.getElementById("modal").style.display = "none";
+      if (modal.style.display === "block") {
+        modal.style.display = "none";
+        document.body.style.overflow = '';
+      }
+    }
+  });
 
-      // Também reexibe o cabeçalho ao fechar com ESC
-      document.body.classList.remove("modal-ativa");
+  // Redimensionar a imagem quando a janela for redimensionada
+  window.addEventListener('resize', function() {
+    const modal = document.getElementById("modal");
+    const imgModal = document.getElementById("img-modal");
+    
+    if (modal.style.display === "block" && imgModal) {
+      ajustarImagemModal(imgModal);
     }
   });
 
