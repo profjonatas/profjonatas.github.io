@@ -47,21 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const modal = document.getElementById("modal");
       const imgModal = document.getElementById("img-modal");
       
-      // Bloquear scroll do body quando o modal estiver aberto
-      document.body.style.overflow = 'hidden';
+      // Resetar estilos
+      imgModal.style.maxWidth = 'none';
+      imgModal.style.maxHeight = 'none';
+      imgModal.style.width = 'auto';
+      imgModal.style.height = 'auto';
       
       imgModal.src = e.target.src;
       modal.style.display = "block";
+      document.body.style.overflow = 'hidden';
       
-      // Ajustar imagem após carregamento
+      // Ajustar após carregamento
       imgModal.onload = function() {
         ajustarImagemModal(imgModal);
       };
       
-      // Se a imagem já estiver em cache
-      if (imgModal.complete) {
-        ajustarImagemModal(imgModal);
-      }
+      if (imgModal.complete) ajustarImagemModal(imgModal);
     });
   });
 
@@ -72,25 +73,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const imgRatio = img.naturalWidth / img.naturalHeight;
     const windowRatio = windowWidth / windowHeight;
     
-    // Ajustar baseado na orientação da imagem
+    // Resetar estilos primeiro
+    img.style.maxWidth = 'none';
+    img.style.maxHeight = 'none';
+    img.style.width = 'auto';
+    img.style.height = 'auto';
+    
     if (imgRatio > windowRatio) {
-      // Imagem mais larga que a janela
-      img.style.maxWidth = '95vw';
-      img.style.maxHeight = 'auto';
+      // Imagem mais larga que a tela
+      img.style.width = '95vw';
+      img.style.height = 'auto';
+      img.style.margin = '5vh auto';
     } else {
-      // Imagem mais alta que a janela
-      img.style.maxHeight = '90vh';
-      img.style.maxWidth = 'auto';
+      // Imagem mais alta que a tela
+      img.style.height = '90vh';
+      img.style.width = 'auto';
+      img.style.margin = '5vh auto';
     }
   }
 
   // Fechar o modal
   document.querySelector(".fechar").addEventListener("click", () => {
     document.getElementById("modal").style.display = "none";
-    document.body.style.overflow = ''; // Restaurar scroll do body
+    document.body.style.overflow = '';
   });
 
-  // Fechar modal ao clicar fora da imagem
+  // Fechar ao clicar fora
   document.getElementById("modal").addEventListener("click", function(e) {
     if (e.target === this) {
       this.style.display = "none";
@@ -98,22 +106,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Navegar entre as fotos no modal
-  document.getElementById("proximo").addEventListener("click", () => {
+  // Navegação entre fotos
+  document.getElementById("proximo").addEventListener("click", (e) => {
+    e.stopPropagation();
     fotoAtual = (fotoAtual + 1) % total;
     const imgModal = document.getElementById("img-modal");
     imgModal.src = fotos[fotoAtual].src;
-    ajustarImagemModal(imgModal);
+    imgModal.onload = function() {
+      ajustarImagemModal(imgModal);
+    };
+    if (imgModal.complete) ajustarImagemModal(imgModal);
   });
 
-  document.getElementById("anterior").addEventListener("click", () => {
+  document.getElementById("anterior").addEventListener("click", (e) => {
+    e.stopPropagation();
     fotoAtual = (fotoAtual - 1 + total) % total;
     const imgModal = document.getElementById("img-modal");
     imgModal.src = fotos[fotoAtual].src;
-    ajustarImagemModal(imgModal);
+    imgModal.onload = function() {
+      ajustarImagemModal(imgModal);
+    };
+    if (imgModal.complete) ajustarImagemModal(imgModal);
   });
 
-  // Navegar nas setas do carrossel
+  // Navegação do carrossel
   document.querySelector(".seta-direita").addEventListener("click", () => {
     posicao = (posicao + 1) % total;
     atualizarCarrossel();
@@ -124,43 +140,34 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarCarrossel();
   });
 
-  // Navegação com teclado
+  // Teclado
   document.addEventListener("keydown", (event) => {
     const modal = document.getElementById("modal");
-    const imgModal = document.getElementById("img-modal");
     
     if (event.key === "ArrowLeft") {
       if (modal.style.display === "block") {
-        fotoAtual = (fotoAtual - 1 + total) % total;
-        imgModal.src = fotos[fotoAtual].src;
-        ajustarImagemModal(imgModal);
+        document.getElementById("anterior").click();
       } else {
         posicao = (posicao - 1 + total) % total;
         atualizarCarrossel();
       }
     } else if (event.key === "ArrowRight") {
       if (modal.style.display === "block") {
-        fotoAtual = (fotoAtual + 1) % total;
-        imgModal.src = fotos[fotoAtual].src;
-        ajustarImagemModal(imgModal);
+        document.getElementById("proximo").click();
       } else {
         posicao = (posicao + 1) % total;
         atualizarCarrossel();
       }
-    } else if (event.key === "Escape") {
-      if (modal.style.display === "block") {
-        modal.style.display = "none";
-        document.body.style.overflow = '';
-      }
+    } else if (event.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+      document.body.style.overflow = '';
     }
   });
 
-  // Redimensionar a imagem quando a janela for redimensionada
+  // Redimensionamento
   window.addEventListener('resize', function() {
-    const modal = document.getElementById("modal");
     const imgModal = document.getElementById("img-modal");
-    
-    if (modal.style.display === "block" && imgModal) {
+    if (imgModal && document.getElementById("modal").style.display === "block") {
       ajustarImagemModal(imgModal);
     }
   });
