@@ -5,37 +5,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const total = fotos.length;
   let posicao = 0;
   let fotoAtual = 0;
+  const isMobile = window.innerWidth <= 768;
 
   function atualizarCarrossel() {
     fotos.forEach((foto, i) => {
       const index = (i - posicao + total) % total;
 
-      foto.classList.remove("ativa");
-      foto.style.opacity = "0";
-      foto.style.zIndex = "0";
-      foto.style.transform = "translate(-50%, -50%) scale(0.6)";
+      if (isMobile) {
+        // Modo mobile - apenas mostra/oculta
+        foto.classList.remove("ativa");
+        foto.style.opacity = "0";
+        foto.style.transform = "translate(-50%, -50%) scale(0.9)";
+        
+        if (index === 0) {
+          foto.classList.add("ativa");
+          foto.style.opacity = "1";
+          foto.style.transform = "translate(-50%, -50%) scale(1)";
+        }
+      } else {
+        // Modo desktop - efeito 3D completo
+        foto.classList.remove("ativa");
+        foto.style.opacity = "0";
+        foto.style.zIndex = "0";
+        foto.style.transform = "translate(-50%, -50%) scale(0.6)";
 
-      if (index === 0) {
-        foto.style.transform = "translate(-50%, -50%) scale(1.2)";
-        foto.style.opacity = "1";
-        foto.classList.add("ativa");
-        foto.style.zIndex = "2";
-      } else if (index === 1) {
-        foto.style.transform = "translate(calc(-50% + 250px), -50%) scale(0.8) rotateY(-20deg)";
-        foto.style.opacity = "0.6";
-        foto.style.zIndex = "1";
-      } else if (index === 2) {
-        foto.style.transform = "translate(calc(-50% + 450px), -50%) scale(0.7) rotateY(-30deg)";
-        foto.style.opacity = "0.4";
-        foto.style.zIndex = "0";
-      } else if (index === total - 1) {
-        foto.style.transform = "translate(calc(-50% - 250px), -50%) scale(0.8) rotateY(20deg)";
-        foto.style.opacity = "0.6";
-        foto.style.zIndex = "1";
-      } else if (index === total - 2) {
-        foto.style.transform = "translate(calc(-50% - 450px), -50%) scale(0.7) rotateY(30deg)";
-        foto.style.opacity = "0.4";
-        foto.style.zIndex = "0";
+        if (index === 0) {
+          foto.style.transform = "translate(-50%, -50%) scale(1.2)";
+          foto.style.opacity = "1";
+          foto.classList.add("ativa");
+          foto.style.zIndex = "2";
+        } else if (index === 1) {
+          foto.style.transform = "translate(calc(-50% + 250px), -50%) scale(0.8) rotateY(-20deg)";
+          foto.style.opacity = "0.6";
+          foto.style.zIndex = "1";
+        } else if (index === 2) {
+          foto.style.transform = "translate(calc(-50% + 450px), -50%) scale(0.7) rotateY(-30deg)";
+          foto.style.opacity = "0.4";
+          foto.style.zIndex = "0";
+        } else if (index === total - 1) {
+          foto.style.transform = "translate(calc(-50% - 250px), -50%) scale(0.8) rotateY(20deg)";
+          foto.style.opacity = "0.6";
+          foto.style.zIndex = "1";
+        } else if (index === total - 2) {
+          foto.style.transform = "translate(calc(-50% - 450px), -50%) scale(0.7) rotateY(30deg)";
+          foto.style.opacity = "0.4";
+          foto.style.zIndex = "0";
+        }
       }
     });
   }
@@ -106,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Navegação entre fotos
+  // Navegação entre fotos no modal
   document.getElementById("proximo").addEventListener("click", (e) => {
     e.stopPropagation();
     fotoAtual = (fotoAtual + 1) % total;
@@ -172,5 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Inicialização
   atualizarCarrossel();
 });
