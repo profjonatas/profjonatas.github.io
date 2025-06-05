@@ -67,7 +67,7 @@ nav {
 
 /* Estilo dos links de navegação */
 nav a {
-  margin: 0 3em;
+  margin: 0 1em;
   color: yellow;
   text-decoration: none;
   font-weight: bold;
@@ -87,6 +87,10 @@ main {
 /* Espaçamento entre seções */
 section {
   margin-bottom: 2em;
+}
+.intro{
+  background-color: #0056a3;
+  text-align: center;
 }
 
 /* ------------------ IMAGENS DE PERFIL ------------------ */
