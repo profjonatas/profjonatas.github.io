@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Site carregado com sucesso!");
-
+  alert("meu nome e leo")
   const fotos = document.querySelectorAll(".carrossel3d .foto");
   const total = fotos.length;
   let posicao = 0;

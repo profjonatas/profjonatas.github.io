@@ -19,8 +19,8 @@ body {
 /* ------------------ CABEÇALHO ------------------ */
 /* Estiliza o cabeçalho com cor de fundo e preenchimento */
 header {
-  background-color: #0056a3;
-  color: yellow;
+  background-color:#0056a3;
+  color: rgb(0, 0, 0);
   padding: 1em;
   z-index: 1000;  /* Garante que o cabeçalho fique acima de outros conteúdos */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o cabeçalho */
