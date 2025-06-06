@@ -344,6 +344,10 @@ footer {
     top: 15px;
   }
   
+  #bemvindo {
+  font-size: 1.5em;
+  }
+  
   .modal-setas {
     padding: 0 10px;
   }
