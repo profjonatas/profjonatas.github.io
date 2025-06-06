@@ -88,9 +88,13 @@ main {
 section {
   margin-bottom: 2em;
 }
+
+/*-----------------  BEM - VINDO ---------------------------------------------*/
 .intro{
-  background-color: #0056a3;
   text-align: center;
+}
+#bemvindo{
+  font-size: 3em;
 }
 
 /* ------------------ IMAGENS DE PERFIL ------------------ */
