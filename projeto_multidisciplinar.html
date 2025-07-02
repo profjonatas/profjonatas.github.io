@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projeto Multidisciplinar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Cabeçalho do site com imagem da escola em destaque -->
+  <header class="header-destaque">
+    <!-- Link que leva de volta à página inicial -->
+    <a href="index.html">
+      <!-- Imagem da escola, que serve como link para a home -->
+      <img src="img/fpimg.png" alt="Foto da escola" class="img-cabecalho" width="400" />
+    </a>
+    <div class="titulo-escola">
+      <h1>E.E. Fernando Pessoa</h1>
+      <h2>Curso Técnico em Desenvolvimento de Sistemas</h2>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="turma2b.html">Turma 2ºB</a>
+        <a href="turma3b.html">Turma 3ºB</a>
+        <a href="culminancia.html">Culminância</a>
+      </nav>
+    </header>
+  
+    <!-- Conteúdo principal -->
+    <main>
+      <br>
+      <h2>Projeto Multidisciplinar</h2>
+      <p>Ao longo do segundo ano do curso técnico em Desenvolvimento de Sistemas, os estudantes estão desenvolvendo o projeto com base em situações-problema reais do mundo do trabalho.</p>
+      <p>Durante o processo, colocamos em prática os conhecimentos adquiridos nas disciplinas técnicas, utilizando ferramentas de gestão de projetos, como cronograma, análise de riscos e estrutura analítica (EAP). 
+        Também exploramos metodologias de inovação, como Design Thinking e prototipagem, buscando criar soluções viáveis, criativas e sustentáveis.</p>
+      <br>
+      <p>Além do desenvolvimento técnico, o projeto reforça valores importantes como ética, responsabilidade social e sustentabilidade, alinhando-se aos Objetivos de Desenvolvimento Sustentável (ODS) da ONU. 
+        Essa experiência permite aos estudantes vivenciar todas as fases de um projeto real, favorecendo o trabalho em equipe, a autonomia e o pensamento crítico — competências essenciais para formação profissional.</p>
+    
+        <!-- Galeria de fotos estilo roleta -->
+    <section class="carrossel-container">
+      <h2>Momentos do Projeto</h2>
+      <button class="seta-esquerda">&#10094;</button>
+      
+      <div class="carrossel3d" id="carrossel3d">
+        <!-- Imagens do carrossel -->
+        <img src="img/turma3b/grupo pesquisa -.jpg" class="foto" alt="Foto 1" data-index="0" />
+        <img src="img/turma3b/Grupo Pesquisa.jpg" class="foto" alt="Foto 2" data-index="1" />
+        <img src="img/turma3b/Grupo Projeto Multidisciplinar.jpg" class="foto" alt="Foto 3" data-index="2" />
+        <img src="img/turma3b/Grupo Projeto Multidisciplinar01004609.jpg" class="foto" alt="Foto 4" data-index="3" />
+        <img src="img/turma3b/IMG_20250327_210422444.jpg" class="foto" alt="Foto 5" data-index="4" />
+        <img src="img/turma3b/ProfCesar185510825.jpg" class="foto" alt="Foto 6" data-index="5" />
+        <img src="img/turma3b/ProfCesar185519621.jpg" class="foto" alt="Foto 7" data-index="6" />
+        <img src="img/turma3b/ProfCesar185526583.jpg" class="foto" alt="Foto 8" data-index="7" />
+        <img src="img/turma3b/Projeto Multidisciplinar2.jpg" class="foto" alt="Foto 8" data-index="8" />
+        <img src="img/turma3b/Projeto Multidisciplinar26.jpg" class="foto" alt="Foto 8" data-index="9" />
+        <img src="img/turma3b/Projeto MultidisciplinarHDR.jpg" class="foto" alt="Foto 8" data-index="10" />
+        <img src="img/turma3b/Realização de registros 3B.jpg" class="foto" alt="Foto 8" data-index=11" />
+      </div>
+      
+      <button class="seta-direita">&#10095;</button>
+    </section>
+
+    <!-- Modal de imagem em tela cheia -->
+    <div id="modal" class="modal">
+      <span class="fechar">&times;</span>
+      <img class="modal-conteudo" id="img-modal" />
+      <div class="modal-setas">
+        <span id="anterior">&#9664;</span>
+        <span id="proximo">&#9654;</span>
+      </div>
+    </div>
+
+    <!-- Importa o script JS -->
+    <script src="js/script.js"></script>
+  </main>
+  
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Todos os direitos reservados.</p>
+    </footer>
+  </body>
+  </html>
