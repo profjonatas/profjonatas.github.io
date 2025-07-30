@@ -1,191 +1,186 @@
-/* ------------------ RESET DE ESTILOS ------------------ */
-/* Remove margens e preenchimentos padrão dos navegadores e usa box-sizing: border-box */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* As variáveis foram substituídas diretamente nos estilos */
+
+/* ------------------ IMPORTS ------------------ */
+@import url('reset.css');
 
 /* ------------------ ESTILO GERAL ------------------ */
-/* Define fonte, cor de fundo e cor do texto para o corpo da página */
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333333;
   line-height: 1.6;
- /* padding-top: 140px;  Ajuste este valor conforme a altura do cabeçalho */
+  margin-left: 250px;
+  transition: margin 0.3s ease;
 }
 
-/* ------------------ CABEÇALHO ------------------ */
-/* Estiliza o cabeçalho com cor de fundo e preenchimento */
-header {
-  background-color:#0056a3;
-  color: yellow;
-  padding: 1em;
-  z-index: 1000;  /* Garante que o cabeçalho fique acima de outros conteúdos */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o cabeçalho */
+.main-content {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-/* Layout flexível no cabeçalho, alinhando os itens */
-.header-destaque {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* ------------------ SIDEBAR ------------------ */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 230px;
+  height: 100vh;
+  background: #0056a3;
+  color: rgb(255, 255, 255);
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  border-radius: 17px;
 }
 
-/* Define o tamanho e aparência da imagem do cabeçalho */
-.img-cabecalho {
-  height: 100px;
-  width: auto;
-  border-radius: 10px;
-  margin-right: 1em;
-}
-
-/* Responsável pela área do título da escola */
-.titulo-escola {
-  flex: 1;
-}
-
-/* Remove margens dos títulos no cabeçalho */
-.titulo-escola h1,
-.titulo-escola h2 {
-  margin: 0;
-}
-
-/* ------------------ MENU DE NAVEGAÇÃO ------------------ */
-/* Centraliza e espaça os links de navegação */
-nav {
-  margin-top: 1em;
+.sidebar-header {
   text-align: center;
-  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo dos links de navegação */
-nav a {
-  margin: 0 1em;
-  color: yellow;
+.sidebar-header img {
+  margin: 0 auto;
+  max-width: 80%;
+  height: auto;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.sidebar-nav a {
+  display: block;
+  color: #ffd700;
+  padding: 0.5rem 1.5rem;
   text-decoration: none;
-  font-weight: bold;
+  transition: all 0.2s ease;
+  margin: 0.5rem 0;
+  border-left: 3px solid transparent;
+  font-weight: 500;
 }
 
-/* Estilo ao passar o mouse nos links */
-nav a:hover {
-  text-decoration: underline;
+.sidebar-nav a:hover,
+.sidebar-nav a:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #ffd700;
+}
+
+.sidebar-nav a.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 3px solid #ffd700;
+}
+
+/* ------------------ HEADER ------------------ */
+.header-destaque {
+  background-color: #ffffff;
+  color: #0056a3;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-escola h1 {
+  color: #0056a3;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.titulo-escola h2 {
+  color: #555555;
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 /* ------------------ CONTEÚDO PRINCIPAL ------------------ */
-/* Espaçamento interno do conteúdo principal */
 main {
-  padding: 2em;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Espaçamento entre seções */
-section {
-  margin-bottom: 2em;
+.info {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/*-----------------  BEM - VINDO ---------------------------------------------*/
-.intro{
-  text-align: center;
-}
-#bemvindo{
-  font-size: 3em;
+.info h2 {
+  color: #0056a3;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
 }
 
-/* ------------------ IMAGENS DE PERFIL ------------------ */
-/* Imagens com bordas arredondadas e sombra */
-.img-arredondada {
+/* ------------------ CARDS ------------------ */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
   width: 100%;
-  max-width: 200px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  color: #0056a3;
+  margin-bottom: 0.5rem;
 }
 
 /* ------------------ GALERIA ------------------ */
-/* Layout flexível com espaçamento entre imagens */
 .galeria {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.5rem;
   justify-content: center;
 }
 
-/* Estilo das imagens na galeria */
 .galeria img {
   width: 100%;
   max-width: 200px;
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-/* ------------------ RODAPÉ ------------------ */
-/* Centraliza o texto do rodapé com fundo claro */
-footer {
-  text-align: center;
-  padding: 1em;
-  background: #eee;
-  font-size: 0.9em;
+.galeria img:hover {
+  transform: scale(1.05);
 }
 
-/* ------------------ RESPONSIVIDADE ------------------ */
-/* Tablets (até 768px) */
-@media (max-width: 768px) {
-  .header-destaque {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .img-cabecalho {
-    margin-right: 0;
-    margin-bottom: 1em;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 0.5em;
-  }
-
-  main {
-    padding: 1em;
-  }
-}
-
-/* Celulares (até 480px) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4em;
-  }
-
-  h2 {
-    font-size: 1.1em;
-  }
-
-  .img-arredondada {
-    max-width: 150px;
-  }
-
-  .galeria img {
-    max-width: 100%;
-  }
-}
-
-/* ------------------ CARROSSEL DE FOTOS ------------------ */
-/* Container do carrossel com largura máxima e margem automática */
+/* ------------------ CARROSSEL ------------------ */
 .carrossel-container {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 3rem auto;
   overflow: visible;
   text-align: center;
 }
 
-/* Área onde as imagens do carrossel giram em 3D */
 .carrossel3d {
   position: relative;
   height: 350px;
@@ -193,49 +188,56 @@ footer {
   perspective: 1000px;
 }
 
-/* Estilo padrão de cada foto no carrossel */
 .foto {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  max-height: 100px; /* Imagens menores no carrossel */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   opacity: 0;
   z-index: 0;
 }
 
-/* Estilo da foto ativa (central) no carrossel */
 .foto.ativa {
   transform: translate(-50%, -50%) scale(1.0);
   opacity: 1;
   z-index: 2;
 }
 
-/* Botões de navegação do carrossel (setas) */
 .seta-esquerda,
 .seta-direita {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 35px;
+  font-size: 2rem;
   background: rgba(255, 255, 255, 0.8);
   border: none;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 0.5rem;
   border-radius: 50%;
   z-index: 3;
+  transition: all 0.2s ease;
 }
 
-/* Posicionamento das setas */
-.seta-esquerda { left: 10px; }
-.seta-direita { right: 10px; }
+.seta-esquerda:hover,
+.seta-direita:hover {
+  background: #0056a3;
+  color: white;
+}
 
-/* ------------------ MODAL DE IMAGEM (TELA CHEIA) ------------------ */
-/* Modal escuro sobre a tela toda */
+.seta-esquerda {
+  left: 10px;
+}
+
+.seta-direita {
+  right: 10px;
+}
+
+/* ------------------ MODAL ------------------ */
 .modal {
   display: none;
   position: fixed;
@@ -244,12 +246,11 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0, 0, 0, 0.95);
   overflow: auto;
   touch-action: pan-y;
 }
 
-/* Imagem exibida em tela cheia */
 .modal-conteudo {
   display: block;
   max-width: 95vw;
@@ -262,27 +263,26 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
-/* Botão de fechar o modal */
 .fechar {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  color: #fff;
-  font-size: 35px;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: white;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   z-index: 1001;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .fechar:hover {
   transform: scale(1.1);
+  color: #ffd700;
 }
 
-/* Container das setas dentro do modal */
 .modal-setas {
   position: fixed;
   top: 50%;
@@ -291,119 +291,111 @@ footer {
   justify-content: space-between;
   transform: translateY(-50%);
   color: white;
-  font-size: 35px;
-  padding: 0 20px;
+  font-size: 2rem;
+  padding: 0 1.5rem;
   box-sizing: border-box;
   z-index: 1001;
 }
 
-/* Estilo das setas no modal */
 .modal-setas span {
   cursor: pointer;
   user-select: none;
-  padding: 10px 15px;
-  background: rgba(0,0,0,0.6);
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .modal-setas span:hover {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   transform: scale(1.1);
 }
 
-/* Ajustes para tablets */
+/* ------------------ RODAPÉ ------------------ */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #eeeeee;
+  font-size: 0.9rem;
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
 @media (max-width: 768px) {
-  .modal-conteudo {
-    max-width: 98vw;
-    max-height: 85vh;
-  }
-  
-  .fechar {
-    font-size: 30px;
-    right: 15px;
-  }
-  
-  .modal-setas span {
-    font-size: 30px;
-    padding: 8px 12px;
-  }
-}
-
-/* Ajustes para celulares */
-@media (max-width: 480px) {
-  .modal-conteudo {
-    max-width: 100vw;
-    max-height: 70vh;
-    border-radius: 0;
-  }
-  
-  .fechar {
-    font-size: 25px;
-    right: 10px;
-    top: 15px;
-  }
-  
-  #bemvindo {
-  font-size: 1.3em;
+  body {
+    margin-left: 0;
   }
 
-  .modal-setas {
-    padding: 0 10px;
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
-  
-  .modal-setas span {
-    font-size: 25px;
-    padding: 6px 10px;
-  }
-}
 
-/* Orientação paisagem em celulares */
-@media (max-height: 480px) {
-  .modal-conteudo {
-    max-height: 95vh;
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-}
 
-/* ------------------ CARROSSEL MOBILE ------------------ */
-@media (max-width: 768px) {
+  .sidebar-nav a {
+    margin: 0.5rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .sidebar-nav a:hover,
+  .sidebar-nav a:focus {
+    border-left: none;
+    border-bottom: 3px solid #ffd700;
+  }
+
+  .sidebar-nav a.active {
+    border-left: none;
+    border-bottom: 3px solid #ffd700;
+  }
+
   .carrossel3d {
     height: 250px;
     perspective: none;
   }
-  
+
   .foto {
-    opacity: 0;
-    transition: opacity 0.3s ease;
     transform: translate(-50%, -50%) scale(0.9);
   }
-  
+
   .foto.ativa {
-    opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    z-index: 2;
   }
-  
-  /* Esconder fotos não ativas */
-  .foto:not(.ativa) {
-    display: none;
+
+  .modal-conteudo {
+    max-width: 98vw;
+    max-height: 85vh;
   }
-  
-  /* Aumentar área de toque das setas */
-  .seta-esquerda, .seta-direita {
-    padding: 15px;
-    background: rgba(0, 86, 163, 0.7);
-    color: white;
+
+  .fechar {
+    font-size: 1.5rem;
+  }
+
+  .modal-setas span {
+    font-size: 1.5rem;
   }
 }
 
-/* Ajustes para celulares pequenos */
 @media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-conteudo {
+    max-width: 100vw;
+    max-height: 70vh;
+  }
+
   .carrossel3d {
     height: 200px;
   }
-  
-  .foto {
-    max-height: 150px;
+
+  #bemvindo {
+    font-size: 1.8rem;
   }
 }
