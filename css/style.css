@@ -1,4 +1,3 @@
-
 /* ------------------ IMPORTS ------------------ */
 @import url('reset.css');
 
@@ -25,7 +24,7 @@ body {
   top: 0;
   width: 230px;
   height: 100vh;
-  background: #0056a3;
+  background:darkblue;
   color: rgb(255, 255, 255);
   padding: 1rem 0;
   z-index: 1000;
@@ -74,14 +73,14 @@ body {
 /* ------------------ HEADER ------------------ */
 .header-destaque {
   background-color: #ffffff;
-  color: #0056a3;
+  color: darkblue;
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .titulo-escola h1 {
-  color: #0056a3;
+  color: darkblue;
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
   font-family: 'Arial', sans-serif;
@@ -109,7 +108,7 @@ main {
 }
 
 .info h2 {
-  color: #0056a3;
+  color: darkblue;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -146,8 +145,31 @@ main {
 }
 
 .card-content h3 {
-  color: #0056a3;
+  color: darkblue;
+  font-size: 25px;
   margin-bottom: 0.5rem;
+}
+
+.btn{
+  color: #eeeeee;
+  font-size: 15px;
+}
+.botao{
+  background-color: darkblue;
+  border-radius: 10px;
+  margin-top: 10px;
+  border-color: rgba(0, 0, 139, 0);
+  width: 110px;
+  height: 40px;
+}
+
+.botaop{
+  background-color: darkblue;
+  border-radius: 10px;
+  margin-top: 35px;
+  border-color: rgba(0, 0, 139, 0);
+  width: 120px;
+  height: 40px;
 }
 
 /* ------------------ GALERIA ------------------ */
@@ -223,7 +245,7 @@ main {
 
 .seta-esquerda:hover,
 .seta-direita:hover {
-  background: #0056a3;
+  background: darkblue;
   color: white;
 }
 
