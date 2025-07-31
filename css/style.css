@@ -72,24 +72,48 @@ body {
 
 /* ------------------ HEADER ------------------ */
 .header-destaque {
-  background-color: #ffffff;
-  color: darkblue;
+  background-color: #f9f9f9;
+  color: rgb(255, 255, 255);
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .titulo-escola h1 {
-  color: darkblue;
+  /* color: darkblue; */
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
   font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.8s ease;
+}
+.text-degradeh1{
+  color:darkblue;
+  background: linear-gradient(135deg,darkblue, #492bf6, #3cc5f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .titulo-escola h2 {
-  color: #555555;
-  font-size: 1.2rem;
-  font-weight: normal;
+  color: #000000;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Arial', sans-serif;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.8s ease;
+}
+.text-degradeh2{
+  color:rgb(255, 244, 121);
+  background: linear-gradient(135deg,darkblue, #492bf6, #3cc5f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ------------------ CONTEÚDO PRINCIPAL ------------------ */
