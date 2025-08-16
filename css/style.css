@@ -511,6 +511,9 @@ footer {
     border-left: none;
     border-bottom: 3px solid #ffd700;
   }
+  .header-destaque-ds{
+    background-image: url(img_tecnicos/fundo_ds_mobile.jpg);
+  }
   .titulo-escola-tec-dese{
     font-size: 10px;
   }
