@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Técnica Ferando Pessoa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/LOGOFER.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo_fp_png.png" alt="" id="leo">
+                </div>
+                <div class="logo-text">
+                    <h1>Ferando Pessoa</h1>
+                    <p>Escola Técnica</p>
+                </div>
+            </div>
+            
+            <nav class="nav">
+                <button class="nav-btn active" onclick="window.location.href='index.html'">Início</button>
+                <button class="nav-btn" onclick="window.location.href='ds.html'">Desenvolvimento</button>
+                <button class="nav-btn" onclick="window.location.href='adm.html'">Administração</button>
+                <button class="nav-btn" onclick="window.location.href='projetos.html'">Projetos</button>
+            </nav>
+            
+
+        </div>
+    </header>
+
+
+
+
+
+<!-- Projetos -->
+<div id="projetos" class="course-section">
+    <div class="container">
+        <div class="section-header">
+            <h1>Projetos dos <span class="highlight">Alunos</span></h1>
+            <p>Conheça alguns dos projetos desenvolvidos pelos nossos estudantes durante o curso</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-badge">Desenvolvimento</div>
+                <h3>Sistema de Gestão Escolar</h3>
+                <p>Sistema web completo para gestão acadêmica com módulos de matrícula, notas, frequência, biblioteca e comunicação. Desenvolvido com arquitetura microserviços e interface responsiva.</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-badge">Administração</div>
+                <h3>Plano de Negócios - StartUp Tech</h3>
+                <p>Plano de negócios abrangente para startup de fintech, incluindo análise de mercado, projeções financeiras, estratégia de marketing digital e modelo de captação de investimentos.</p>
+                <div class="project-tech">
+                    <span>Business Model</span>
+                    <span>Excel</span>
+                    <span>PowerBI</span>
+                    <span>Pitch Deck</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-badge">Vigilância</div>
+                <h3>Sistema de Monitoramento Inteligente</h3>
+                <p>Sistema avançado de monitoramento com inteligência artificial para detecção facial, reconhecimento de placas e identificação de comportamentos suspeitos em tempo real.</p>
+                <div class="project-tech">
+                    <span>OpenCV</span>
+                    <span>Python</span>
+                    <span>Raspberry Pi</span>
+                    <span>TensorFlow</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-badge">Desenvolvimento</div>
+                <h3>App Mobile de Delivery</h3>
+                <p>Aplicativo completo de delivery com geolocalização, chat em tempo real, sistema de avaliações, múltiplas formas de pagamento e painel administrativo para restaurantes.</p>
+                <div class="project-tech">
+                    <span>React Native</span>
+                    <span>Firebase</span>
+                    <span>Stripe</span>
+                    <span>Google Maps</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-badge">Administração</div>
+                <h3>Dashboard Executivo de Vendas</h3>
+                <p>Dashboard interativo para análise de performance de vendas com KPIs em tempo real, previsões de demanda e relatórios automatizados para tomada de decisão estratégica.</p>
+                <div class="project-tech">
+                    <span>Google Analytics</span>
+                    <span>Power BI</span>
+                    <span>Tableau</span>
+                    <span>SQL Server</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-badge">Vigilância</div>
+                <h3>Central de Monitoramento 24h</h3>
+                <p>Projeto completo de central de monitoramento com múltiplas telas, sistema de gravação em nuvem, alertas automáticos e integração com forças de segurança pública.</p>
+                <div class="project-tech">
+                    <span>Milestone</span>
+                    <span>CFTV</span>
+                    <span>AWS</span>
+                    <span>API Integration</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img src="ICON/LOGOFER.png" alt="" class="log">
+                        </div>
+                        <div class="logo-text">
+                            <h3>Ferando Pessoa</h3>
+                            <p>Escola Técnica</p>
+                        </div>
+                    </div>
+                    <p>Formando profissionais qualificados há mais de 25 anos. Prepare-se para o futuro com nossos cursos técnicos.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Cursos</h4>
+                    <ul>
+                        <li><button onclick="showSection('desenvolvimento')">Desenvolvimento de Sistemas</button></li>
+                        <li><button onclick="showSection('administracao')">Administração</button></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p>📍 Av. Paulista, 1000 - São Paulo - SP</p>
+                        <p>🕒 Carga Horaria: 200h </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Escola Técnica Fernando Pessoa. Todos os direitos reservados. | CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

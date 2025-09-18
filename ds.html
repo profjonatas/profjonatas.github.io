@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Técnica Ferando Pessoa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/LOGOFER.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="img/logo_fp_png.png" alt="" id="leo">
+                </div>
+                <div class="logo-text">
+                    <h1>Ferando Pessoa</h1>
+                    <p>Escola Técnica</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" onclick="window.location.href='index.html'">Início</button>
+                <button class="nav-btn" onclick="window.location.href='ds.html'">Desenvolvimento</button>
+                <button class="nav-btn" onclick="window.location.href='adm.html'">Administração</button>
+                <button class="nav-btn" onclick="window.location.href='vigilancia.html'">Vigilância</button>
+                <button class="nav-btn" onclick="window.location.href='projetos.html'">Projetos</button>
+            </nav>
+            
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    <!-- Desenvolvimento de Sistemas -->
+<div id="desenvolvimento" class="course-section">
+    <div class="container">
+        <div class="course-header">
+            <div class="course-icon-large">💻</div>
+            <h1>Desenvolvimento de Sistemas</h1>
+            <p class="course-duration">Duração: 2 anos</p>
+            <p class="course-description"> durante esse ano letivo trabalhamos sobre completo domínio em tecnologias front-end, back-end, mobile e manipulção e criação de banco de dados. curso abrange os fundamentos da programação até as mais modernas arquiteturas de software.Com tudo grupos formados para apresentação do projeto multidiciplinar</p>
+        </div>
+
+        <div class="course-content">
+            <!-- Carrossel de Imagens -->
+            <div class="carousel-container">
+                <h3>Visitas técnicas 2025</h3>
+                <div class="carousel" id="carousel-desenvolvimento">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="img/inpe.webp" alt="Laboratório de Informática">
+                            <div class="slide-caption">Laboratório de Informática</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/faculdade.jpg" alt="Sala de Desenvolvimento">
+                            <div class="slide-caption">Sala de Desenvolvimento</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="img/ibm.jpg" alt="Estação de Trabalho">
+                            <div class="slide-caption">Estações de Trabalho</div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="prevSlide('desenvolvimento')">‹</button>
+                    <button class="carousel-btn next" onclick="nextSlide('desenvolvimento')">›</button>
+                </div>
+            </div>
+
+            <!-- Flashcards -->
+            <div class="flashcards-container">
+                <h3>Disciplinas do Curso</h3>
+                <div class="flashcards-grid">
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>INPE <br>(Instituto Nacional de Pesquisas Espaciais)</h4>
+                                <div class="card-icon">🛰️</div>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>Domínio completo em Python, Java, JavaScript, TypeScript, C# e PHP. Aprenda sintaxe, paradigmas de programação, estruturas de dados e algoritmos avançados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>Faculdade <br>(engenheiro Salvador Arena)</h4>
+                                <div class="card-icon">🎓</div>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>HTML5, CSS3, JavaScript ES6+, React, Angular, Vue.js, Node.js, Express.js. Desenvolvimento de SPAs, PWAs e aplicações responsivas com as melhores práticas de UX/UI.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>IBM <br> (International Business Machines Corporation)</h4>
+                                <div class="card-icon"> 🧠 </div>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>MySQL, PostgreSQL, MongoDB, Redis. Modelagem de dados, otimização de queries, NoSQL, AWS, Azure, Google Cloud Platform e arquiteturas serverless.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>CIEE <br> (Feira de Profissões )</h4>
+                                <div class="card-icon">💼</div>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>React Native, Flutter, Kotlin, Swift. Desenvolvimento nativo e híbrido para iOS e Android, integração com APIs, push notifications e publicação nas stores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>feira cumilancia</h4>
+                                <div class="card-icon">⚙️</div>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>Git, GitHub, GitLab, Docker, Kubernetes, CI/CD, Jenkins, metodologias ágeis (Scrum, Kanban) e práticas de desenvolvimento colaborativo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h4>Interdiciplinar e multidiciplinar</h4>
+                                <div class="card-icon">🔒</div>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>Segurança de aplicações, criptografia, autenticação, autorização, testes unitários, integração, TDD, BDD e práticas de código limpo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <img src="ICON/LOGOFER.png" alt="" class="log">
+                        </div>
+                        <div class="logo-text">
+                            <h3>Ferando Pessoa</h3>
+                            <p>Escola Técnica</p>
+                        </div>
+                    </div>
+                    <p>Formando profissionais qualificados há mais de 25 anos. Prepare-se para o futuro com nossos cursos técnicos.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Cursos</h4>
+                    <ul>
+                        <li><button onclick="showSection('desenvolvimento')">Desenvolvimento de Sistemas</button></li>
+                        <li><button onclick="showSection('administracao')">Administração</button></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p>📍 Av. Paulista, 1000 - São Paulo - SP</p>
+                        <p>🕒 Carga Horaria: 200h </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Escola Técnica Fernando Pessoa. Todos os direitos reservados. | CNPJ: 12.345.678/0001-90</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
