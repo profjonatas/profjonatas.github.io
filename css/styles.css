@@ -86,23 +86,6 @@ body {
 .nav-btn.active {
     color: #ffc107;
 }
-
-/* .cta-btn {
-    background: #eab412;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.cta-btn:hover {
-    transform: translateY(-2px);
-}  */
-
-/* Main Content */
 .main {
     padding-top: 80px;
 }
@@ -415,6 +398,11 @@ body {
     gap: 4rem;
 }
 
+/* carrosel 3b e 2b    */
+#carouselExampleCaptions{
+    margin-top: 60px;
+}
+/* fim */ 
 /* Carousel */
 .carousel-container {
     background: rgba(15, 31, 53, 0.6);

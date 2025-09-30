@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Técnica Ferando Pessoa</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/LOGOFER.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -16,7 +22,7 @@
                     <img src="img/logo_fp_png.png" alt="" id="leo">
                 </div>
                 <div class="logo-text">
-                    <h1>Ferando Pessoa</h1>
+                    <h1>Fernando Pessoa</h1>
                     <p>Escola Técnica</p>
                 </div>
             </div>
@@ -26,7 +32,7 @@
                 <button class="nav-btn" onclick="window.location.href='adm.html'">Administração</button>
                 <button class="nav-btn" onclick="window.location.href='projetos.html'">Projetos</button>
             </nav>
-            
+
         </div>
     </header>
 
@@ -38,274 +44,424 @@
 
 
     <!-- Desenvolvimento de Sistemas -->
-<div id="desenvolvimento" class="course-section">
-    <div class="container">
-        <div class="course-header">
-            <div class="course-icon-large">💻</div>
-            <h1>Desenvolvimento de Sistemas</h1>
-            <p class="course-duration">Trajetoria do ano letivo de 2025 </p>
-             <!-- Blocos das turmas -->
-            <div class="turmas-container">
-                <!-- Turma 3ºB -->
-                <div class="turma">
-                    <h1 class="Turmas">3ºB</h1>
-                    <p class="course-description">
-                        Durante esse ano letivo trabalhamos sobre completo domínio em tecnologias 
-                        front-end, back-end, mobile e manipulação e criação de banco de dados. 
-                        O curso abrange os fundamentos da programação até as mais modernas 
-                        arquiteturas de software. Com tudo, grupos foram formados para apresentação 
-                        do projeto multidisciplinar.
-                    </p>
-                </div>
+    <div id="desenvolvimento" class="course-section">
+        <div class="container">
+            <div class="course-header">
+                <div class="course-icon-large">💻</div>
+                <h1>Desenvolvimento de Sistemas</h1>
+                <p class="course-duration">Trajetoria do ano letivo de 2025 </p>
+                <!-- Blocos das turmas -->
+                <div class="turmas-container">
+                    <!-- Turma 3ºB -->
+                    <div class="turma">
+                        <h1 class="Turmas">3ºB</h1>
+                        <p class="course-description">
+                            Durante esse ano letivo trabalhamos sobre completo domínio em tecnologias
+                            front-end, back-end, programação mobile e manipulação e criação de banco de dados.
+                            O curso abrange os fundamentos da programação até as mais modernas
+                            arquiteturas de software e linguagens de programação como como python, javascript, sql,
+                            Kotlin, PHP e Java . Com tudo, grupos foram formados para apresentação, alem de ferramentas
+                            como MongoDB, firebase, frameworks e React
+                            do projeto multidisciplinar.
+                        </p>
+                        <!-- bootstrap carrosel  -->
+                        <div id="carouselExampleCaptions" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/desenvolvimento/3b/ProfCesar185510825.jpg" class="d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/desenvolvimento/3b/ProfCesar185510825.jpg" class="d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
 
-                <!-- Turma 2ºB -->
-                <div class="turma">
-                    <h1 class="Turmas">2ºB</h1>
-                    <p class="course-description">
-                        Texto específico do 2ºB vai aqui (conteúdo do que foi estudado ou 
-                        desenvolvido por essa turma).
-                    </p>
-                </div>
-            </div>
-
-        <div class="course-content">
-            <!-- Carrossel de Imagens -->
-             <div class="carousel-container">
-                    <h3>VISITAS TECNICAS 2025</h3>
-                    <div class="carousel" id="carousel-desenvolvimento">
-                        <div class="carousel-track">
-                            <div class="carousel-slide active">
-                                <img src="img/desenvolvimento/3b/faculdade.jpg" alt="Laboratório de Informática">
-                                <div class="slide-caption">faculdade engenheiro salvador arena</div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="..." class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0065.jpg" alt="Sala de Desenvolvimento">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0066.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0067.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0068.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0070.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0071.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0072.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0073.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                             <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0083.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0081.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0077.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0078.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0080.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0082.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0084.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0085.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">faculdade 3ºB e 2ºB</div>
-                            </div>
-
-                            <!-- fotos da IBM -->
-
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/3b/ibm.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">IBM (International Business Machines Corporation)</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/IBM/IMG-20250523-WA0028.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turmas 3°B e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/IBM/IMG-20250523-WA0029.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turmas 3°B e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/IBM/IMG-20250523-WA0030.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turmas 3°B e 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/IBM/IMG-20250922-WA0109.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turmas 3°B e 2ºB</div>
-                            </div>
-
-
-                            <!-- fotos da INPE -->
-
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/3b/inpe.webp" alt="Estação de Trabalho">
-                                <div class="slide-caption">INPE (Instituto Nacional de Pesquisas Espaciais do Brasil)</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250806-WA0004.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250806-WA0005.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0088.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0089.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0090.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0091.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0092.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0093.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0094.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0095.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0096.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0096.jpg" alt="Estação de Trabalho">
-                                <div class="slide-caption">Turma 2ºB</div>
-                            </div>
-                            
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-btn prev" onclick="prevSlide('desenvolvimento')">‹</button>
-                        <button class="carousel-btn next" onclick="nextSlide('desenvolvimento')">›</button>
+                        <!-- fim -->
+                    </div>
+
+
+                    <!-- Turma 2ºB -->
+                    <div class="turma">
+                        <h1 class="Turmas">2ºB</h1>
+                        <p class="course-description">
+                            Durante esse ano letivo trabalhamos sobre completo domínio em tecnologias
+                            Lógica e Linguagem de Programação, Redes de Computadores e Segurança da Informação na Nuvem,
+                            Processos de Desenvolvimento de Software e Metodologias Ágeis, Inteligencia artificial e
+                            versionamento de codigo.
+                            O curso abrange os fundamentos da programação até as mais modernas
+                            arquiteturas de software. Com tudo, grupos foram formados para apresentação
+                            do projeto multidisciplinar.
+                        </p>
+                        <!-- bootstrap carrosel -->
+                        <div id="carouselExampleCaptions" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/desenvolvimento/2b/2B realização de registros.jpg" class="d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/desenvolvimento/2b/grupo de trabalho.jpg" class="d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="..." class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- fim -->
                     </div>
                 </div>
 
-                
-            <!-- Flashcards -->
-            <div class="flashcards-container">
-                <h3>Disciplinas do Curso</h3>
-                <div class="flashcards-grid">
-                    <div class="flashcard" onclick="flipCard(this)">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <h4>INPE <br>(Instituto Nacional de Pesquisas Espaciais)</h4>
-                                <div class="card-icon">🛰️</div>
+
+
+
+
+                <div class="course-content">
+                    <!-- Carrossel de Imagens -->
+                    <div class="carousel-container">
+                        <h3>VISITAS TECNICAS 2025</h3>
+                        <div class="carousel" id="carousel-desenvolvimento">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <img src="img/desenvolvimento/3b/faculdade.jpg" alt="Laboratório de Informática">
+                                    <div class="slide-caption">faculdade engenheiro salvador arena</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0065.jpg"
+                                        alt="Sala de Desenvolvimento">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0066.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0067.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0068.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0070.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0071.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0072.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0073.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0083.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0081.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0077.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0078.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0080.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0082.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0084.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/Faculdade/IMG-20250922-WA0085.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">faculdade 3ºB e 2ºB</div>
+                                </div>
+
+                                <!-- fotos da IBM -->
+
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/3b/ibm.jpg" alt="Estação de Trabalho">
+                                    <div class="slide-caption">IBM (International Business Machines Corporation)</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/IBM/IMG-20250523-WA0028.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turmas 3°B e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/IBM/IMG-20250523-WA0029.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turmas 3°B e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/IBM/IMG-20250523-WA0030.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turmas 3°B e 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/IBM/IMG-20250922-WA0109.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turmas 3°B e 2ºB</div>
+                                </div>
+
+
+                                <!-- fotos da INPE -->
+
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/3b/inpe.webp" alt="Estação de Trabalho">
+                                    <div class="slide-caption">INPE (Instituto Nacional de Pesquisas Espaciais do
+                                        Brasil)</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250806-WA0004.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250806-WA0005.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0088.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0089.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0090.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0091.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0092.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0093.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0094.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0095.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0096.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/desenvolvimento/2b/INPE/IMG-20250922-WA0096.jpg"
+                                        alt="Estação de Trabalho">
+                                    <div class="slide-caption">Turma 2ºB</div>
+                                </div>
+
                             </div>
-                            <div class="flashcard-back">
-                                <p>Domínio completo em Python, Java, JavaScript, TypeScript, C# e PHP. Aprenda sintaxe, paradigmas de programação, estruturas de dados e algoritmos avançados.</p>
-                            </div>
+                            <button class="carousel-btn prev" onclick="prevSlide('desenvolvimento')">‹</button>
+                            <button class="carousel-btn next" onclick="nextSlide('desenvolvimento')">›</button>
                         </div>
                     </div>
-                    <div class="flashcard" onclick="flipCard(this)">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <h4>Faculdade <br>(engenheiro Salvador Arena)</h4>
-                                <div class="card-icon">🎓</div>
+
+
+                    <!-- Flashcards -->
+                    <div class="flashcards-container">
+                        <h3>Disciplinas do Curso</h3>
+                        <div class="flashcards-grid">
+                            <div class="flashcard" onclick="flipCard(this)">
+                                <div class="flashcard-inner">
+                                    <div class="flashcard-front">
+                                        <h4>INPE <br>(Instituto Nacional de Pesquisas Espaciais)</h4>
+                                        <div class="card-icon">🛰️</div>
+                                    </div>
+                                    <div class="flashcard-back">
+                                        <p>Domínio completo em Python, Java, JavaScript, TypeScript, C# e PHP. Aprenda
+                                            sintaxe, paradigmas de programação, estruturas de dados e algoritmos
+                                            avançados.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flashcard-back">
-                                <p>HTML5, CSS3, JavaScript ES6+, React, Angular, Vue.js, Node.js, Express.js. Desenvolvimento de SPAs, PWAs e aplicações responsivas com as melhores práticas de UX/UI.</p>
+                            <div class="flashcard" onclick="flipCard(this)">
+                                <div class="flashcard-inner">
+                                    <div class="flashcard-front">
+                                        <h4>Faculdade <br>(engenheiro Salvador Arena)</h4>
+                                        <div class="card-icon">🎓</div>
+                                    </div>
+                                    <div class="flashcard-back">
+                                        <p>HTML5, CSS3, JavaScript ES6+, React, Angular, Vue.js, Node.js, Express.js.
+                                            Desenvolvimento de SPAs, PWAs e aplicações responsivas com as melhores
+                                            práticas de UX/UI.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="flashcard" onclick="flipCard(this)">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <h4>IBM <br> (International Business Machines Corporation)</h4>
-                                <div class="card-icon"> 🧠 </div>
+                            <div class="flashcard" onclick="flipCard(this)">
+                                <div class="flashcard-inner">
+                                    <div class="flashcard-front">
+                                        <h4>IBM <br> (International Business Machines Corporation)</h4>
+                                        <div class="card-icon"> 🧠 </div>
+                                    </div>
+                                    <div class="flashcard-back">
+                                        <p>MySQL, PostgreSQL, MongoDB, Redis. Modelagem de dados, otimização de queries,
+                                            NoSQL, AWS, Azure, Google Cloud Platform e arquiteturas serverless.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flashcard-back">
-                                <p>MySQL, PostgreSQL, MongoDB, Redis. Modelagem de dados, otimização de queries, NoSQL, AWS, Azure, Google Cloud Platform e arquiteturas serverless.</p>
+                            <div class="flashcard" onclick="flipCard(this)">
+                                <div class="flashcard-inner">
+                                    <div class="flashcard-front">
+                                        <h4>CIEE <br> (Feira de Profissões )</h4>
+                                        <div class="card-icon">💼</div>
+                                    </div>
+                                    <div class="flashcard-back">
+                                        <p>React Native, Flutter, Kotlin, Swift. Desenvolvimento nativo e híbrido para
+                                            iOS e Android, integração com APIs, push notifications e publicação nas
+                                            stores.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="flashcard" onclick="flipCard(this)">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <h4>CIEE <br> (Feira de Profissões )</h4>
-                                <div class="card-icon">💼</div>
+                            <div class="flashcard" onclick="flipCard(this)">
+                                <div class="flashcard-inner">
+                                    <div class="flashcard-front">
+                                        <h4>feira cumilancia</h4>
+                                        <div class="card-icon">⚙️</div>
+                                    </div>
+                                    <div class="flashcard-back">
+                                        <p>Git, GitHub, GitLab, Docker, Kubernetes, CI/CD, Jenkins, metodologias ágeis
+                                            (Scrum, Kanban) e práticas de desenvolvimento colaborativo.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flashcard-back">
-                                <p>React Native, Flutter, Kotlin, Swift. Desenvolvimento nativo e híbrido para iOS e Android, integração com APIs, push notifications e publicação nas stores.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flashcard" onclick="flipCard(this)">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <h4>feira cumilancia</h4>
-                                <div class="card-icon">⚙️</div>
-                            </div>
-                            <div class="flashcard-back">
-                                <p>Git, GitHub, GitLab, Docker, Kubernetes, CI/CD, Jenkins, metodologias ágeis (Scrum, Kanban) e práticas de desenvolvimento colaborativo.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flashcard" onclick="flipCard(this)">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <h4>Interdiciplinar e multidiciplinar</h4>
-                                <div class="card-icon">🔒</div>
-                            </div>
-                            <div class="flashcard-back">
-                                <p>Segurança de aplicações, criptografia, autenticação, autorização, testes unitários, integração, TDD, BDD e práticas de código limpo.</p>
+                            <div class="flashcard" onclick="flipCard(this)">
+                                <div class="flashcard-inner">
+                                    <div class="flashcard-front">
+                                        <h4>Interdiciplinar e multidiciplinar</h4>
+                                        <div class="card-icon">🔒</div>
+                                    </div>
+                                    <div class="flashcard-back">
+                                        <p>Segurança de aplicações, criptografia, autenticação, autorização, testes
+                                            unitários, integração, TDD, BDD e práticas de código limpo.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 
-    <script src="javascript/script.js"></script>
+        <script src="javascript/script.js"></script>
 </body>
+
 </html>
