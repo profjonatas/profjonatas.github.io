@@ -399,7 +399,11 @@ body {
 }
 
 /* carrosel 3b e 2b    */
-#carouselExampleCaptions{
+#carouselExample{
+    margin-top: 60px;
+}
+
+#carouselExampleIndicators{
     margin-top: 60px;
 }
 /* fim */ 
@@ -409,6 +413,7 @@ body {
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 193, 7, 0.3);
+    margin-top: 100px;
 }
 
 .carousel-container h3 {
