@@ -110,6 +110,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, 5000);
 }
+let ultimaPosicaoScroll = 0;
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+    const posicaoAtual = window.scrollY;
+
+    if (posicaoAtual > ultimaPosicaoScroll) {
+        // ROLANDO PARA BAIXO → ESCONDE
+        header.style.top = "-120px"; 
+    } else {
+        // ROLANDO PARA CIMA → MOSTRA
+        header.style.top = "0";
+    }
+
+    ultimaPosicaoScroll = posicaoAtual;
+});
 
 // Iniciar autoplay reverso quando a página carregar
 document.addEventListener('DOMContentLoaded', startCarouselAutoplayReverse);

@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Estadual Fernando Pessoa</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carrosel.css">
     <link rel="icon" href="img/LOGOFER.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
 
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -22,14 +32,14 @@
                     <p>Curso Técnico</p>
                 </div>
             </div>
-            
+
             <nav class="nav">
                 <button class="nav-btn" onclick="window.location.href='index.html'">Início</button>
                 <button class="nav-btn" onclick="window.location.href='adm.html'">Administração</button>
                 <button class="nav-btn" onclick="window.location.href='ds.html'">Desenvolvimento de Sistemas</button>
                 <button class="nav-btn active" onclick="window.location.href='projetos.html'">Projetos</button>
             </nav>
-            
+
 
         </div>
     </header>
@@ -38,97 +48,385 @@
 
 
 
-<!-- Projetos -->
-<div id="projetos" class="course-section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Projetos dos <span class="highlight">Alunos</span></h1>
-            <p>Conheça alguns dos projetos desenvolvidos pelos nossos estudantes durante o curso</p>
-        </div>
+    <!-- Projetos -->
+    <div id="projetos" class="course-section">
+        <div class="container">
+            <div class="section-header">
+                <h2> projeto dos <span class="highlight">Alunos</span></h2>
+                <p>Conheça alguns dos projetos desenvolvidos pelos nossos estudantes durante o curso</p>
+            </div>
 
-          <!-- :aqui sera adicionado a descrição de cada projeto desenvolvido  -->
-    
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-badge">Desenvolvimento</div>     <!--  curso tecnico e serie--> 
-                <h3>Apex Fusion</h3>
-                <p>desenvolvidos 4 projetos relacionados a mercado de procura alto, dificuldade em informação, dificuldade em organização 
-                 <br> Factu =  site onde o usuario tera inforações sobre faculdades e universidades
-                 <br> Note = site e aplicativo, melhorando a organização do usuario
-                 <br> Rept = site de preparatorio para vestibulares 
-                 <br> Lycix =  site e app de e-comerce voltado a produtos femininos
-                </p>
-                <div class="project-tech">
-                    <span>javascript</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Firebase</span>
-                    <span>css, html</span>
-                    <span>android studio</span>
-                    <span>Kotlin</span>
-                    <span>figma</span>
-                    <span>bulma</span>
-                    <span>java</span>
+            <!-- :aqui sera adicionado a descrição de cada projeto desenvolvido  -->
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-badge">Desenvolvimento 3ºB</div> <!--  curso tecnico e serie-->
+                    <h3>Apex Fusion</h3>
+                    <p>desenvolvidos 4 projetos relacionados a mercado de procura alto, dificuldade em informação,
+                        dificuldade em organização
+                        <br> Factu = site onde o usuario tera inforações sobre faculdades e universidades
+                        <br> Note = site e aplicativo, melhorando a organização do usuario
+                        <br> Rept = site de preparatorio para vestibulares
+                        <br> Lycix = site e app de e-comerce voltado a produtos femininos
+                    </p>
+                    <div class="project-tech">
+                        <span>javascript</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Firebase</span>
+                        <span>css, html</span>
+                        <span>android studio</span>
+                        <span>Kotlin</span>
+                        <span>figma</span>
+                        <span>bulma</span>
+                        <span>java</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-badge">Administração</div>
-                <h3>Plano de Negócios - StartUp Tech</h3>
-                <p>Plano de negócios abrangente para startup de fintech, incluindo análise de mercado, projeções financeiras, estratégia de marketing digital e modelo de captação de investimentos.</p>
-                <div class="project-tech">
-                    <span>Business Model</span>
-                    <span>Excel</span>
-                    <span>PowerBI</span>
-                    <span>Pitch Deck</span>
+
+
+
+
+                <div class="project-card">
+                    <div class="project-badge">Desenvolvimento 3ºB</div>
+                    <h3>Black Tech</h3>
+                    <p>Plano de negócios abrangente para startup de fintech, incluindo análise de mercado, projeções
+                        financeiras, estratégia de marketing digital e modelo de captação de investimentos. Lorem ipsum,
+                        dolor sit amet consectetur adipisicing elit. Officia magnam debitis possimus corporis dolor,
+                        voluptas molestias earum deleniti quas doloremque! Commodi sit, quam voluptate recusandae
+                        voluptates iure illo tempore id!</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>javascript</span>
+                        <span>Visual studio code</span>
+                        <span>Mongo DB</span>
+                        <span>React</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-badge">Vigilância</div>
-                <h3>Sistema de Monitoramento Inteligente</h3>
-                <p>Sistema avançado de monitoramento com inteligência artificial para detecção facial, reconhecimento de placas e identificação de comportamentos suspeitos em tempo real.</p>
-                <div class="project-tech">
-                    <span>OpenCV</span>
-                    <span>Python</span>
-                    <span>Raspberry Pi</span>
-                    <span>TensorFlow</span>
+
+
+
+
+
+
+
+                <div class="project-card">
+                    <div class="project-badge">Desenvolvimento 3ºB</div>
+                    <h3>CINCO PETALAS</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum voluptas possimus maiores quis quas architecto laboriosam quae voluptatibus, facere distinctio voluptate debitis? Fugit aliquam illo ea voluptate repellendus quidem eligendi.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. At optio ducimus autem repellendus commodi mollitia voluptas unde distinctio quae ipsum quisquam quod, vero cumque libero blanditiis repudiandae non quia placeat!</p>
+                    <div class="project-tech">
+                        <span>OpenCV</span>
+                        <span>Python</span>
+                        <span>Raspberry Pi</span>
+                        <span>TensorFlow</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-badge">Desenvolvimento</div>
-                <h3>App Mobile de Delivery</h3>
-                <p>Aplicativo completo de delivery com geolocalização, chat em tempo real, sistema de avaliações, múltiplas formas de pagamento e painel administrativo para restaurantes.</p>
-                <div class="project-tech">
-                    <span>React Native</span>
-                    <span>Firebase</span>
-                    <span>Stripe</span>
-                    <span>Google Maps</span>
+
+
+
+
+                <div class="project-card">
+                    <div class="project-badge">Desenvolvimento 3ºB</div>
+                    <h3>Intermed Data Center</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod praesentium maxime voluptas quo consectetur omnis blanditiis nobis. Amet, provident veniam. Voluptates nisi tenetur autem mollitia laboriosam totam itaque, ullam neque.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident esse veritatis nesciunt, ea accusantium numquam cupiditate facilis sapiente tenetur architecto est. Placeat aspernatur nulla, dicta id magni ipsa nam cum!
+                    </p>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Stripe</span>
+                        <span>Google Maps</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-badge">Administração</div>
-                <h3>Dashboard Executivo de Vendas</h3>
-                <p>Dashboard interativo para análise de performance de vendas com KPIs em tempo real, previsões de demanda e relatórios automatizados para tomada de decisão estratégica.</p>
-                <div class="project-tech">
-                    <span>Google Analytics</span>
-                    <span>Power BI</span>
-                    <span>Tableau</span>
-                    <span>SQL Server</span>
+
+
+
+
+                <div class="project-card">
+                    <div class="project-badge">Desenvolvimento 3ºB</div>
+                    <h3>Fusion de sabores</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente impedit, voluptatum animi architecto perspiciatis ut dicta. Est, eum! Ut nulla officiis tempora hic laudantium vitae autem! Quod enim distinctio molestiae?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis temporibus. Accusantium assumenda numquam quaerat laboriosam sit voluptatem aliquam rerum vitae delectus eligendi, temporibus quia eaque ipsam natus culpa debitis.
+                    </p>
+                    <div class="project-tech">
+                        <span>Google Analytics</span>
+                        <span>Power BI</span>
+                        <span>Tableau</span>
+                        <span>SQL Server</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-badge">Vigilância</div>
-                <h3>Central de Monitoramento 24h</h3>
-                <p>Projeto completo de central de monitoramento com múltiplas telas, sistema de gravação em nuvem, alertas automáticos e integração com forças de segurança pública.</p>
-                <div class="project-tech">
-                    <span>Milestone</span>
-                    <span>CFTV</span>
-                    <span>AWS</span>
-                    <span>API Integration</span>
+
+
+
+                <div class="project-card">
+                    <div class="project-badge">Administração 3ºA</div>
+                    <h3>grupo 1 </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus fuga deleniti nostrum culpa illum molestias alias repudiandae, unde expedita id laudantium libero facilis asperiores voluptatibus nisi nihil! Illum, quibusdam quis.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos quidem assumenda magni aspernatur! Neque hic unde, eum, rem possimus natus sunt officia minus repellendus voluptatem autem qui molestias, magnam debitis.
+                    </p>
+                    <div class="project-tech">
+                        <span>Milestone</span>
+                        <span>CFTV</span>
+                        <span>AWS</span>
+                        <span>API Integration</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
                 </div>
+
+
+
+                <div class="project-card">
+                    <div class="project-badge">Administração 3ºA</div>
+                    <h3>grupo 2 </h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, nostrum possimus? Nihil molestias facere obcaecati veritatis, quae eos assumenda fuga sunt enim, exercitationem pariatur neque, eveniet quidem libero maxime velit!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto totam quas rerum ullam minima dignissimos molestiae sunt nihil officia praesentium cupiditate ab, deleniti molestias, sapiente eligendi. Non incidunt impedit ullam?
+                    </p>
+                    <div class="project-tech">
+                        <span>Milestone</span>
+                        <span>CFTV</span>
+                        <span>AWS</span>
+                        <span>API Integration</span>
+                    </div>
+
+                    <!-- Carrossel do Projeto -->
+                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/desenvolvimento/3b/Grupo Pesquisa.jpg" class="d-block w-100"
+                                    alt="Imagem 1 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Adm/Braskem/2025-09-15-13.46.49_969bc1b0.jpg" class="d-block w-100"
+                                    alt="Imagem 2 do Projeto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/cumilancia/IMG-20250702-WA0010.jpg" class="d-block w-100"
+                                    alt="Imagem 3 do Projeto">
+                            </div>
+                        </div>
+
+                        <!-- Botão anterior -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+
+                        <!-- Botão próximo -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+
             </div>
         </div>
     </div>
-</div>
 
 
 
@@ -137,5 +435,7 @@
 
 
     <script src="javascript/script.js"></script>
+    <script src="javascript/carrosel.js"></script>
 </body>
+
 </html>

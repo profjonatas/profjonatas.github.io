@@ -9,8 +9,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #0a1628;
+    background-color:  rgb(11, 11, 61);
     color: white;
+    padding-top: 100px; /* Ajuste conforme altura do header */
 }
 
 .container {
@@ -36,6 +37,17 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: top 0.35s ease;
+}
+
 
 .logo {
     display: flex;
