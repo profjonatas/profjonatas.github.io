@@ -11,7 +11,7 @@ body {
     color: #333;
     background-color:  rgb(11, 11, 61);
     color: white;
-    padding-top: 100px; /* Ajuste conforme altura do header */
+    padding-top: 120px; /* Ajuste conforme altura do header */
 }
 
 .container {
