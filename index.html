@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Header -->
-     <!-- define aqui a logo e o nome da escola no cabeçalho -->
+    <!-- define aqui a logo e o nome da escola no cabeçalho -->
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -18,130 +18,100 @@
                 </div>
                 <div class="logo-text">
                     <h1>E.E.E.I. Fernando Pessoa</h1>
-                
                 </div>
             </div>
-            
+
             <!-- botoes que direcionam ao arquivos dos cursos e dos projetos  -->
-                <nav class="nav">
-                    <button class="nav-btn active" onclick="window.location.href='index.html'">Início</button>
-                    <button class="nav-btn" onclick="window.location.href='adm.html'">Administração</button>
-                    <button class="nav-btn" onclick="window.location.href='ds.html'">Desenvolvimento de Sistemas</button>
-                <!-- <button class="nav-btn" onclick="window.location.href='projetos.html'">Projetos</button> --
-                </nav>
-        
+            <nav class="nav">
+                <button class="nav-btn active" onclick="window.location.href='index.html'">Início</button>
+                <button class="nav-btn" onclick="window.location.href='adm.html'">Administração</button>
+                <button class="nav-btn" onclick="window.location.href='ds.html'">Desenvolvimento de Sistemas</button>
+                <!-- <button class="nav-btn" onclick="window.location.href='projetos.html'">Projetos</button> -->
+            </nav>
         </div>
     </header>
 
-<!-- Main Content -->
-<main class="main">
+    <!-- Main Content -->
+    <main class="main">
 
-    <!-- Início -->
-    <div id="inicio" class="section active">
-        <!-- Hero -->
-        <div class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="highlight">Fernando</span>
-                        Pessoa
-                    </h1>
+        <!-- Início -->
+        <div id="inicio" class="section active">
+            <!-- Hero -->
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="highlight">Fernando</span>
+                            Pessoa
+                        </h1>
 
-                        <!-- a descrição da historia da escola -->
+                        <p class="hero-description">
+                            A Escola Estadual de Ensino Integral Fernando Pessoa, mais
+                            conhecida como PEI Fernando Pessoa, tem uma história de
+                            dedicação à educação e formação de jovens. Fundada em abril
+                            de 1986, a escola recebeu esse nome em homenagem ao renomado
+                            poeta português, reconhecido mundialmente por suas obras
+                            literárias.
+                        </p>
+                        <br>
+                        <p class="hero-description">
+                            Oferecemos os cursos técnico em: <br>
+                            <span class="highlight" onclick="location.href='adm.html'">Administração</span> e
+                            <span class="highlight" onclick="location.href='ds.html'">Desenvolvimento de Sistemas</span>
+                        </p>
 
-                    <p class="hero-description">
-                        
-                        A Escola Estadual de Ensino Integral Fernando Pessoa, mais 
-                        conhecida como PEI Fernando Pessoa, tem uma história de 
-                        dedicação à educação e formação de jovens. Fundada em abril 
-                        de 1986, a escola recebeu esse nome em homenagem ao renomado 
-                        poeta português, reconhecido mundialmente por suas obras 
-                        literárias.
-                    </p>
-                    <br>
-                    <p class="hero-description">
-                        Oferecemos os cursos técnico em: <br> 
-                        <span class="highlight" onclick="location.href='adm.html'">Administração</span> e 
-                        <span class="highlight" onclick="location.href='ds.html'">Desenvolvimento de Sistemas</span>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- descrição dos cursos tecnicos oferecidos  -->
-        <div class="about-section">
-            <div class="container">
-                <div class="about-grid">
-                        <div class="about-text">
-                            <div class="stat-card">
-                                <div class="stat-icon">📊</div>      <!-- ícones de adm  -->
-                                <h3>Administração</h3>
-                                <p>O Curso Técnico em Administração dentro do Programa Educação Profissional Paulista
-                            é uma formação profissional integrada ao Ensino Médio público e gratuito no estado de São Paulo,
-                            organizada como um itinerário formativo técnico articulado ao currículo escolar. 
-                            O objetivo é capacitar estudantes do ensino médio para atuar de forma prática e eficaz 
-                            em atividades administrativas e de gestão nas organizações. 
-                            <br>Ao longo do curso, os estudantes desenvolvem competências relacionadas à comunicação, 
-                            planejamento, organização de documentos, suporte em rotinas de recursos humanos, finanças, 
-                            logística e outras atividades próprias da área administrativa, 
-                            preparando-se para responder às demandas do mercado de trabalho com postura ética e profissional.
-                            </p>
-                            </div>
-                        </div>
-                    
-                    <!--    <div class="stat-card">
-                            <div class="stat-icon">🧑‍💼	</div>
-                            <h3>30</h3>
-                            <p>Estudantes 2ºA</p>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">👩‍💼</div>
-                            <h3>23</h3>
-                            <p>Estudantes 3ºA</p>
-                        </div>
-                    -->
-                </div>
-            </div>
-        </div>
-        
-        <div class="about-section">
-            <div class="container">
-                <div class="about-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon">💻</div>  <!-- icones de ds -->
-                            <h3>Desenvolvimento de Sistemas</h3>
-                            <p>O Curso Técnico em Desenvolvimento de Sistemas é uma formação profissional 
-                            integrada ao Ensino Médio público e gratuito em escolas da rede estadual de São Paulo, 
-                            ofertada pelo Programa Educação Profissional Paulista. 
-                            Esse curso prepara os estudantes para atuar na análise, projeto, construção, documentação, 
-                            teste e manutenção de sistemas de informação, utilizando linguagens de programação, 
-                            ambientes de desenvolvimento e bancos de dados para criar soluções de software eficientes e funcionais.
-                            <br>A formação combina conteúdos técnicos de tecnologia da informação com as disciplinas do Ensino Médio, 
-                            preparando o aluno tanto para o mercado de trabalho em áreas de desenvolvimento de software 
-                            quanto para continuidade dos estudos em cursos superiores na área de tecnologia.
-                            </p>
-                        </div>
-                <!--    <div class="stat-card">
-                            <div class="stat-icon">🧑‍💻</div>     
-                            <h3>34</h3>
-                            <p>Estudantes 2°B</p>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon">🧑‍💻</div>
-                            <h3>35</h3>
-                            <p>Estudantes 3°B</p>
-                        </div>
-                    -->
                     </div>
                 </div>
             </div>
+
+            <!-- descrição dos cursos tecnicos oferecidos  -->
+            <div class="about-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <div class="stat-card">
+                                <div class="stat-icon">📊</div>
+                                <h3>Administração</h3>
+                                <p>
+                                    O Curso Técnico em Administração dentro do Programa Educação Profissional Paulista
+                                    é uma formação profissional integrada ao Ensino Médio público e gratuito no estado de São Paulo,
+                                    organizada como um itinerário formativo técnico articulado ao currículo escolar.
+                                    O objetivo é capacitar estudantes do ensino médio para atuar de forma prática e eficaz
+                                    em atividades administrativas e de gestão nas organizações.
+                                    <br>Ao longo do curso, os estudantes desenvolvem competências relacionadas à comunicação,
+                                    planejamento, organização de documentos, suporte em rotinas de recursos humanos, finanças,
+                                    logística e outras atividades próprias da área administrativa,
+                                    preparando-se para responder às demandas do mercado de trabalho com postura ética e profissional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">💻</div>
+                            <h3>Desenvolvimento de Sistemas</h3>
+                            <p>
+                                O Curso Técnico em Desenvolvimento de Sistemas é uma formação profissional
+                                integrada ao Ensino Médio público e gratuito em escolas da rede estadual de São Paulo,
+                                ofertada pelo Programa Educação Profissional Paulista.
+                                Esse curso prepara os estudantes para atuar na análise, projeto, construção, documentação,
+                                teste e manutenção de sistemas de informação, utilizando linguagens de programação,
+                                ambientes de desenvolvimento e bancos de dados para criar soluções de software eficientes e funcionais.
+                                <br>A formação combina conteúdos técnicos de tecnologia da informação com as disciplinas do Ensino Médio,
+                                preparando o aluno tanto para o mercado de trabalho em áreas de desenvolvimento de software
+                                quanto para continuidade dos estudos em cursos superiores na área de tecnologia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-</main>
-
-
     </main>
 
     <script src="javascript/script.js"></script>

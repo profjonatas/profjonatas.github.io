@@ -38,8 +38,6 @@ body {
     align-items: center;
 }
 
-
-
 .header {
     position: fixed;
     top: 0;
@@ -48,18 +46,18 @@ body {
     transition: top 0.35s ease;
 }
 
-
 .logo {
     display: flex;
     align-items: center;
     gap: 2px;
-  
 }
+
 #leo{
     width: 90px;
     height: 70px;
     margin-top: 10px;
 }
+
 /* 
 .logo-icon {
     background: linear-gradient(135deg, #0f2557, #fcfcfc);
@@ -98,6 +96,7 @@ body {
 .nav-btn.active {
     color: #ffc107;
 }
+
 .main {
     padding-top: 80px;
 }
@@ -272,7 +271,6 @@ body {
     color: #94a3b8;
 }
 
-
 .turmas-container {
     display: flex;
     justify-content: space-between;
@@ -289,7 +287,6 @@ body {
     border-color: #0a162800;
     text-align: justify;
 }
-
 
 /* Courses Preview */
 .courses-preview {
@@ -425,6 +422,7 @@ body {
     margin-top: 60px;
 }
 /* fim */ 
+
 /* Carousel */
 .carousel-container {
     background: rgba(15, 31, 53, 0.6);
@@ -528,8 +526,9 @@ body {
     gap: 2rem;
 }
 
+/* altura maior para comportar melhor o texto */
 .flashcard {
-    height: 200px;
+    height: 260px;
     perspective: 1000px;
     cursor: pointer;
 }
@@ -537,7 +536,7 @@ body {
 .flashcard-inner {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100%;          /* ocupa toda a altura do card */
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -559,6 +558,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    box-sizing: border-box; /* garante que padding não estoure a altura */
 }
 
 .flashcard-front {
@@ -570,12 +570,16 @@ body {
     background: linear-gradient(135deg, #ffc107, #f59e0b);
     color: #0a1628;
     transform: rotateY(180deg);
+    justify-content: flex-start; /* texto começa do topo */
+    align-items: flex-start;
+    overflow-y: auto;            /* scroll interno se o texto passar da altura */
 }
 
 .flashcard-front h4 {
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .card-icon {
@@ -587,6 +591,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
+    text-align: left;
 }
 
 /* Projects Section */
@@ -653,11 +658,13 @@ body {
     border-top: 1px solid #2d4a6b;
     padding: 3rem 0 1rem;
 }
+
 .log{
     width: 50px;
     height: 40px;
     margin-right: 10px;
 }
+
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -762,6 +769,7 @@ body {
         right: 10px;
     }
 }
+
 /* RESPONSIVIDADE DAS TURMAS */
 @media (max-width: 768px) {
     .turmas-container {
@@ -775,7 +783,6 @@ body {
         text-align: justify;
     }
 }
-
 
 @media (max-width: 480px) {
     .stats-grid {
