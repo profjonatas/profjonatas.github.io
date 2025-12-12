@@ -597,15 +597,17 @@ body {
     word-break: break-word;
     hyphens: auto;
 }
-/* Centralizar flashcard quando houver apenas um */
-.flashcards-grid:has(.flashcard:only-child) {
+/* Quando tiver somente 1 flashcard (ex: Feira de Culminância) */
+.flashcards-grid.single {
+    grid-template-columns: 1fr;
     justify-items: center;
 }
 
-.flashcards-grid:has(.flashcard:only-child) .flashcard {
-    max-width: 320px;   /* mesmo padrão visual dos outros */
-    width: 100%;
+.flashcards-grid.single .flashcard {
+    width: min(320px, 100%);
+    justify-self: center;
 }
+
 
 
 /* Projects Section */
