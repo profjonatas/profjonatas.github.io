@@ -597,6 +597,16 @@ body {
     word-break: break-word;
     hyphens: auto;
 }
+/* Centralizar flashcard quando houver apenas um */
+.flashcards-grid:has(.flashcard:only-child) {
+    justify-items: center;
+}
+
+.flashcards-grid:has(.flashcard:only-child) .flashcard {
+    max-width: 320px;   /* mesmo padrão visual dos outros */
+    width: 100%;
+}
+
 
 /* Projects Section */
 .projects-grid {
