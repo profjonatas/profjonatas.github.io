@@ -531,6 +531,7 @@ body {
     height: 260px;
     perspective: 1000px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .flashcard-inner {
@@ -592,6 +593,9 @@ body {
     line-height: 1.5;
     font-weight: 500;
     text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 /* Projects Section */
