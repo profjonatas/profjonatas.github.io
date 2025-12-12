@@ -43,73 +43,74 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Carousel functionality
-        const carouselStates = {};
-        
-        // Inicializar os carrosséis quando a página carregar
-        document.addEventListener('DOMContentLoaded', function() {
-            initCarousels();
-            startCarouselAutoplay();
-        });
-        
-        function initCarousels() {
-            const carousels = document.querySelectorAll('.carousel');
-            carousels.forEach(carousel => {
-                const id = carousel.id.replace('carousel-', '');
-                carouselStates[id] = 0;
-                updateCarousel(id);
-            });
-        }
-        
-        function updateCarousel(courseId) {
-            const carousel = document.getElementById(`carousel-${courseId}`);
-            if (!carousel) return;
-            
-            const track = carousel.querySelector('.carousel-track');
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            const currentIndex = carouselStates[courseId];
-            
-            slides.forEach(slide => slide.classList.remove('active'));
-            if (slides[currentIndex]) slides[currentIndex].classList.add('active');
-            
-            const translateX = -currentIndex * 100;
-            track.style.transform = `translateX(${translateX}%)`;
-        }
-        
-        function nextSlide(courseId) {
-            const carousel = document.getElementById(`carousel-${courseId}`);
-            if (!carousel) return;
-            
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            const maxIndex = slides.length - 1;
-            
-            carouselStates[courseId] = (carouselStates[courseId] + 1) > maxIndex ? 0 : carouselStates[courseId] + 1;
-            updateCarousel(courseId);
-        }
-        
-        function prevSlide(courseId) {
-            const carousel = document.getElementById(`carousel-${courseId}`);
-            if (!carousel) return;
-            
-            const slides = carousel.querySelectorAll('.carousel-slide');
-            const maxIndex = slides.length - 1;
-            
-            carouselStates[courseId] = (carouselStates[courseId] - 1) < 0 ? maxIndex : carouselStates[courseId] - 1;
-            updateCarousel(courseId);
-        }
-        
-        // Flashcard functionality
-        function flipCard(card) {
-            card.classList.toggle('flipped');
-        }
-        
-        function startCarouselAutoplay() {
-        setInterval(() => {
+const carouselStates = {};
+
+// Inicializar os carrosséis quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    initCarousels();
+    startCarouselAutoplay();
+});
+
+function initCarousels() {
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        const id = carousel.id.replace('carousel-', '');
+        carouselStates[id] = 0;
+        updateCarousel(id);
+    });
+}
+
+function updateCarousel(courseId) {
+    const carousel = document.getElementById(`carousel-${courseId}`);
+    if (!carousel) return;
+    
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const currentIndex = carouselStates[courseId];
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    if (slides[currentIndex]) slides[currentIndex].classList.add('active');
+    
+    const translateX = -currentIndex * 100;
+    track.style.transform = `translateX(${translateX}%)`;
+}
+
+function nextSlide(courseId) {
+    const carousel = document.getElementById(`carousel-${courseId}`);
+    if (!carousel) return;
+    
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const maxIndex = slides.length - 1;
+    
+    carouselStates[courseId] = (carouselStates[courseId] + 1) > maxIndex ? 0 : carouselStates[courseId] + 1;
+    updateCarousel(courseId);
+}
+
+function prevSlide(courseId) {
+    const carousel = document.getElementById(`carousel-${courseId}`);
+    if (!carousel) return;
+    
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const maxIndex = slides.length - 1;
+    
+    carouselStates[courseId] = (carouselStates[courseId] - 1) < 0 ? maxIndex : carouselStates[courseId] - 1;
+    updateCarousel(courseId);
+}
+
+// Flashcard functionality
+function flipCard(card) {
+    card.classList.toggle('flipped');
+}
+
+function startCarouselAutoplay() {
+    setInterval(() => {
         Object.keys(carouselStates).forEach(courseId => {
             const carousel = document.getElementById(`carousel-${courseId}`);
             if (carousel) nextSlide(courseId); // atual avança
         });
     }, 5000);
 }
+
 let ultimaPosicaoScroll = 0;
 const header = document.querySelector(".header");
 
