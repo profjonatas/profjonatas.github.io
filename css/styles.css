@@ -278,6 +278,7 @@ body {
     justify-content: space-between;
     gap: 20px;
     margin-top: 20px;
+    text-align: justify;
 }
 
 .turma {
@@ -771,6 +772,7 @@ body {
 
     .turma {
         width: 100%;              /* Garante ocupar a tela inteira */
+        text-align: justify;
     }
 }
 
