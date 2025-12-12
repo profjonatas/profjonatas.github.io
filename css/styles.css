@@ -766,6 +766,7 @@ body {
     .turmas-container {
         flex-direction: column;   /* Fica um embaixo do outro */
         gap: 40px;                /* Espaço maior entre as turmas */
+        text-align: justify;
     }
 
     .turma {
