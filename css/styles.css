@@ -145,9 +145,6 @@ body {
 
 .highlight {
     color: #ffc107;
-    cursor: pointer;         /* muda o mouse ao passar por cima */
- /*   text-decoration: none;   /* remove sublinhado */
-    transition: 0.2s;        /* efeito suave ao passar o mouse */
 }
 
 .hero-description {
